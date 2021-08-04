@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		99732D6B26B478FB00FB9033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99732D6926B478FB00FB9033 /* LaunchScreen.storyboard */; };
 		99732D7626B478FB00FB9033 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D7526B478FB00FB9033 /* WBooksTests.swift */; };
 		99732D8126B478FB00FB9033 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D8026B478FB00FB9033 /* WBooksUITests.swift */; };
+		99732DA326BAF30300FB9033 /* ConfigurationFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732DA226BAF30300FB9033 /* ConfigurationFiles.swift */; };
 		D9685F455EF448BADCE10000 /* Pods_WBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445B2D7E5A0F19C95F430BEE /* Pods_WBooksTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +40,18 @@
 
 /* Begin PBXFileReference section */
 		15AE0DC4D278F859710D6348 /* Pods_WBooks_WBooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks_WBooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5D703754FCB2C91A395452 /* Pods-WBooks-WBooksUITests.release(development) .xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.release(development) .xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.release(development) .xcconfig"; sourceTree = "<group>"; };
 		3D7A8A1B93EED42048DB0D01 /* Pods-WBooks-WBooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.release.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3DC9237735D3F9304B269729 /* Pods-WBooksTests.release(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release(production).xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release(production).xcconfig"; sourceTree = "<group>"; };
 		445B2D7E5A0F19C95F430BEE /* Pods_WBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA79F0E147D46E1A50814D9 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5834C050A8CE2B54DF5731 /* Pods-WBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.release.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.release.xcconfig"; sourceTree = "<group>"; };
+		4E06F33644249FE0F0D08BED /* Pods-WBooksTests.release(development) .xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release(development) .xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release(development) .xcconfig"; sourceTree = "<group>"; };
+		5EAC101C410565A6CE874E5A /* Pods-WBooks.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.debug(production).xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.debug(production).xcconfig"; sourceTree = "<group>"; };
 		665450407588438811B9DBE8 /* Pods-WBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.debug.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.debug.xcconfig"; sourceTree = "<group>"; };
+		71CF697188619E709BA1561F /* Pods-WBooks.release(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.release(production).xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.release(production).xcconfig"; sourceTree = "<group>"; };
+		835E958BAF4E6AA4F7C27D1D /* Pods-WBooks.debug(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.debug(development).xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.debug(development).xcconfig"; sourceTree = "<group>"; };
+		89D951035A343518BAFB6405 /* Pods-WBooksTests.debug(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.debug(development).xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.debug(development).xcconfig"; sourceTree = "<group>"; };
 		99732D5B26B478F600FB9033 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99732D5E26B478F600FB9033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99732D6026B478F600FB9033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +66,17 @@
 		99732D7C26B478FB00FB9033 /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99732D8026B478FB00FB9033 /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		99732D8226B478FB00FB9033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99732DA026BAD6C100FB9033 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		99732DA126BAD6D600FB9033 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		99732DA226BAF30300FB9033 /* ConfigurationFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationFiles.swift; sourceTree = "<group>"; };
+		A5ED2BE80406AEBFAAA345DE /* Pods-WBooks.release(development) .xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.release(development) .xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.release(development) .xcconfig"; sourceTree = "<group>"; };
 		AB372D9690D162D5628BF19E /* Pods-WBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB4ADD8A8482CEAD6B7456AD /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEB3BDB06ED08C1794FE0D04 /* Pods-WBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6654DC4B7B6750CCCA990E3 /* Pods-WBooks-WBooksUITests.release(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.release(production).xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.release(production).xcconfig"; sourceTree = "<group>"; };
+		CCE518FCC15482B215F1C532 /* Pods-WBooks-WBooksUITests.debug(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug(development).xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug(development).xcconfig"; sourceTree = "<group>"; };
+		D0EDD964A66BB110B1DB0892 /* Pods-WBooks-WBooksUITests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug(production).xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug(production).xcconfig"; sourceTree = "<group>"; };
+		F509F9AAD2B756E99B2C296F /* Pods-WBooksTests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.debug(production).xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.debug(production).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +132,7 @@
 		99732D5D26B478F600FB9033 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				99732D9F26BAD61400FB9033 /* ConfigurationFiles */,
 				99732D5E26B478F600FB9033 /* AppDelegate.swift */,
 				99732D6026B478F600FB9033 /* SceneDelegate.swift */,
 				99732D6226B478F600FB9033 /* ViewController.swift */,
@@ -145,6 +162,16 @@
 			path = WBooksUITests;
 			sourceTree = "<group>";
 		};
+		99732D9F26BAD61400FB9033 /* ConfigurationFiles */ = {
+			isa = PBXGroup;
+			children = (
+				99732DA026BAD6C100FB9033 /* Development.xcconfig */,
+				99732DA126BAD6D600FB9033 /* Production.xcconfig */,
+				99732DA226BAF30300FB9033 /* ConfigurationFiles.swift */,
+			);
+			path = ConfigurationFiles;
+			sourceTree = "<group>";
+		};
 		C8CC67B221B029CC994A29A5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,8 +181,19 @@
 				3D7A8A1B93EED42048DB0D01 /* Pods-WBooks-WBooksUITests.release.xcconfig */,
 				AB372D9690D162D5628BF19E /* Pods-WBooksTests.debug.xcconfig */,
 				AEB3BDB06ED08C1794FE0D04 /* Pods-WBooksTests.release.xcconfig */,
+				5EAC101C410565A6CE874E5A /* Pods-WBooks.debug(production).xcconfig */,
+				835E958BAF4E6AA4F7C27D1D /* Pods-WBooks.debug(development).xcconfig */,
+				71CF697188619E709BA1561F /* Pods-WBooks.release(production).xcconfig */,
+				A5ED2BE80406AEBFAAA345DE /* Pods-WBooks.release(development) .xcconfig */,
+				D0EDD964A66BB110B1DB0892 /* Pods-WBooks-WBooksUITests.debug(production).xcconfig */,
+				CCE518FCC15482B215F1C532 /* Pods-WBooks-WBooksUITests.debug(development).xcconfig */,
+				C6654DC4B7B6750CCCA990E3 /* Pods-WBooks-WBooksUITests.release(production).xcconfig */,
+				1D5D703754FCB2C91A395452 /* Pods-WBooks-WBooksUITests.release(development) .xcconfig */,
+				F509F9AAD2B756E99B2C296F /* Pods-WBooksTests.debug(production).xcconfig */,
+				89D951035A343518BAFB6405 /* Pods-WBooksTests.debug(development).xcconfig */,
+				3DC9237735D3F9304B269729 /* Pods-WBooksTests.release(production).xcconfig */,
+				4E06F33644249FE0F0D08BED /* Pods-WBooksTests.release(development) .xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,6 +447,7 @@
 			files = (
 				99732D6326B478F600FB9033 /* ViewController.swift in Sources */,
 				99732D5F26B478F600FB9033 /* AppDelegate.swift in Sources */,
+				99732DA326BAF30300FB9033 /* ConfigurationFiles.swift in Sources */,
 				99732D6126B478F600FB9033 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,8 +503,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		99732D8326B478FB00FB9033 /* Debug */ = {
+		99732D8326B478FB00FB9033 /* Debug(production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99732DA126BAD6D600FB9033 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -523,10 +563,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug(production)";
 		};
-		99732D8426B478FB00FB9033 /* Release */ = {
+		99732D8426B478FB00FB9033 /* Release(production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99732DA126BAD6D600FB9033 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -578,11 +619,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release(production)";
 		};
-		99732D8626B478FB00FB9033 /* Debug */ = {
+		99732D8626B478FB00FB9033 /* Debug(production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 665450407588438811B9DBE8 /* Pods-WBooks.debug.xcconfig */;
+			baseConfigurationReference = 99732DA126BAD6D600FB9033 /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -597,11 +638,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = "Debug(production)";
 		};
-		99732D8726B478FB00FB9033 /* Release */ = {
+		99732D8726B478FB00FB9033 /* Release(production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C5834C050A8CE2B54DF5731 /* Pods-WBooks.release.xcconfig */;
+			baseConfigurationReference = 99732DA126BAD6D600FB9033 /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -616,11 +657,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = "Release(production)";
 		};
-		99732D8926B478FB00FB9033 /* Debug */ = {
+		99732D8926B478FB00FB9033 /* Debug(production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB372D9690D162D5628BF19E /* Pods-WBooksTests.debug.xcconfig */;
+			baseConfigurationReference = F509F9AAD2B756E99B2C296F /* Pods-WBooksTests.debug(production).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -638,11 +679,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
-			name = Debug;
+			name = "Debug(production)";
 		};
-		99732D8A26B478FB00FB9033 /* Release */ = {
+		99732D8A26B478FB00FB9033 /* Release(production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEB3BDB06ED08C1794FE0D04 /* Pods-WBooksTests.release.xcconfig */;
+			baseConfigurationReference = 3DC9237735D3F9304B269729 /* Pods-WBooksTests.release(production).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,11 +701,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
-			name = Release;
+			name = "Release(production)";
 		};
-		99732D8C26B478FB00FB9033 /* Debug */ = {
+		99732D8C26B478FB00FB9033 /* Debug(production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB4ADD8A8482CEAD6B7456AD /* Pods-WBooks-WBooksUITests.debug.xcconfig */;
+			baseConfigurationReference = D0EDD964A66BB110B1DB0892 /* Pods-WBooks-WBooksUITests.debug(production).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -680,11 +721,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WBooks;
 			};
-			name = Debug;
+			name = "Debug(production)";
 		};
-		99732D8D26B478FB00FB9033 /* Release */ = {
+		99732D8D26B478FB00FB9033 /* Release(production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D7A8A1B93EED42048DB0D01 /* Pods-WBooks-WBooksUITests.release.xcconfig */;
+			baseConfigurationReference = C6654DC4B7B6750CCCA990E3 /* Pods-WBooks-WBooksUITests.release(production).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -700,7 +741,247 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WBooks;
 			};
-			name = Release;
+			name = "Release(production)";
+		};
+		99732D9726BAD49B00FB9033 /* Debug(development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99732DA026BAD6C100FB9033 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug(development)";
+		};
+		99732D9826BAD49B00FB9033 /* Debug(development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99732DA026BAD6C100FB9033 /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBooks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noelianieres.WBooks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug(development)";
+		};
+		99732D9926BAD49B00FB9033 /* Debug(development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D951035A343518BAFB6405 /* Pods-WBooksTests.debug(development).xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBooksTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noelianieres.WBooksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
+			};
+			name = "Debug(development)";
+		};
+		99732D9A26BAD49B00FB9033 /* Debug(development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE518FCC15482B215F1C532 /* Pods-WBooks-WBooksUITests.debug(development).xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBooksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noelianieres.WBooksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WBooks;
+			};
+			name = "Debug(development)";
+		};
+		99732D9B26BAD4B600FB9033 /* Release(development)  */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99732DA026BAD6C100FB9033 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release(development) ";
+		};
+		99732D9C26BAD4B600FB9033 /* Release(development)  */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99732DA026BAD6C100FB9033 /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBooks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noelianieres.WBooks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release(development) ";
+		};
+		99732D9D26BAD4B600FB9033 /* Release(development)  */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E06F33644249FE0F0D08BED /* Pods-WBooksTests.release(development) .xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBooksTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noelianieres.WBooksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
+			};
+			name = "Release(development) ";
+		};
+		99732D9E26BAD4B600FB9033 /* Release(development)  */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D5D703754FCB2C91A395452 /* Pods-WBooks-WBooksUITests.release(development) .xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBooksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noelianieres.WBooksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WBooks;
+			};
+			name = "Release(development) ";
 		};
 /* End XCBuildConfiguration section */
 
@@ -708,38 +989,46 @@
 		99732D5626B478F600FB9033 /* Build configuration list for PBXProject "WBooks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				99732D8326B478FB00FB9033 /* Debug */,
-				99732D8426B478FB00FB9033 /* Release */,
+				99732D8326B478FB00FB9033 /* Debug(production) */,
+				99732D9726BAD49B00FB9033 /* Debug(development) */,
+				99732D8426B478FB00FB9033 /* Release(production) */,
+				99732D9B26BAD4B600FB9033 /* Release(development)  */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release(production)";
 		};
 		99732D8526B478FB00FB9033 /* Build configuration list for PBXNativeTarget "WBooks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				99732D8626B478FB00FB9033 /* Debug */,
-				99732D8726B478FB00FB9033 /* Release */,
+				99732D8626B478FB00FB9033 /* Debug(production) */,
+				99732D9826BAD49B00FB9033 /* Debug(development) */,
+				99732D8726B478FB00FB9033 /* Release(production) */,
+				99732D9C26BAD4B600FB9033 /* Release(development)  */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release(production)";
 		};
 		99732D8826B478FB00FB9033 /* Build configuration list for PBXNativeTarget "WBooksTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				99732D8926B478FB00FB9033 /* Debug */,
-				99732D8A26B478FB00FB9033 /* Release */,
+				99732D8926B478FB00FB9033 /* Debug(production) */,
+				99732D9926BAD49B00FB9033 /* Debug(development) */,
+				99732D8A26B478FB00FB9033 /* Release(production) */,
+				99732D9D26BAD4B600FB9033 /* Release(development)  */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release(production)";
 		};
 		99732D8B26B478FB00FB9033 /* Build configuration list for PBXNativeTarget "WBooksUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				99732D8C26B478FB00FB9033 /* Debug */,
-				99732D8D26B478FB00FB9033 /* Release */,
+				99732D8C26B478FB00FB9033 /* Debug(production) */,
+				99732D9A26BAD49B00FB9033 /* Debug(development) */,
+				99732D8D26B478FB00FB9033 /* Release(production) */,
+				99732D9E26BAD4B600FB9033 /* Release(development)  */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release(production)";
 		};
 /* End XCConfigurationList section */
 	};
