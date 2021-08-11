@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  WBooks
+
+  Created by noelia.nieres on 10/08/2021.
+  
+*/
+
+"welcome_screen_title" = "Welcome";
+"login_button" = "Log in";
