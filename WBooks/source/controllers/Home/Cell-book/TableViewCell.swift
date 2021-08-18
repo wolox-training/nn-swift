@@ -19,7 +19,13 @@ class TableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15))
+
+        //let margins = UIEdgeInsets(top: 8, left:15, bottom: 8, right: 50)
+        //contentView.frame = contentView.frame.inset(by: margins)
+        
+        let padding = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 50)
+        contentView.frame = bounds.inset(by: padding)
+        
         self.contentView.layer.borderColor = UIColor.white.cgColor
         self.contentView.layer.borderWidth = 1
         self.contentView.layer.cornerRadius = 8

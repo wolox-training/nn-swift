@@ -8,15 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsBook" customModule="WBooks" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsBookView" customModule="WBooks" customModuleProvider="target">
             <connections>
-                <outlet property="author" destination="Bep-GA-T47" id="OMB-rz-D2r"/>
-                <outlet property="available" destination="Ujy-Ia-9aj" id="uge-Rh-sqM"/>
-                <outlet property="detailImage" destination="Wdi-da-U72" id="94W-rf-3X8"/>
-                <outlet property="editorial" destination="Gad-Sn-ddw" id="nFM-4s-CHt"/>
-                <outlet property="titleBook" destination="Ehs-ry-P3E" id="rdJ-Fi-Dne"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="year" destination="ojp-Q2-NTY" id="owo-ti-Btc"/>
+                <outlet property="author" destination="Ujy-Ia-9aj" id="UIE-KA-0m5"/>
+                <outlet property="available" destination="Bep-GA-T47" id="gbb-wG-TF0"/>
+                <outlet property="detailImage" destination="Wdi-da-U72" id="cPz-za-wzx"/>
+                <outlet property="editorial" destination="Gad-Sn-ddw" id="06V-2s-0rV"/>
+                <outlet property="titleBook" destination="Ehs-ry-P3E" id="TDh-nk-7gh"/>
+                <outlet property="year" destination="ojp-Q2-NTY" id="dZG-zi-UB6"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

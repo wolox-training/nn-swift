@@ -15,7 +15,7 @@ struct System {
     }
 }
 
-class ListBooksController: WBooksViewController, UITableViewDelegate, UITableViewDataSource {
+class ListBooksController: WBooksViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,7 +38,7 @@ class ListBooksController: WBooksViewController, UITableViewDelegate, UITableVie
 }
 
 
-extension ListBooksController {
+extension ListBooksController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -59,8 +59,7 @@ extension ListBooksController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let details = DetailsBook()
-        details.commonInit("img_book\(indexPath.item+1)", titleBook: titles[indexPath.item])
+        let details = DetailsViewController("img_book\(indexPath.item+1)", titleBook: titles[indexPath.item])
         self.navigationController?.pushViewController(details, animated: true)
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
