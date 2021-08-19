@@ -6,15 +6,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsCellView" customModule="WBooks" customModuleProvider="target">
-            <connections>
-                <outlet property="commentUser" destination="Yub-5f-wIp" id="KR2-Fa-bKW"/>
-                <outlet property="nameUser" destination="xwd-ro-OM6" id="Y4f-9J-Eqe"/>
-                <outlet property="userImage" destination="zsa-e6-OH2" id="fLU-I2-Th9"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsCellView" rowHeight="113" id="H06-jV-LcL">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsCellView" rowHeight="113" id="H06-jV-LcL" customClass="CommentsCellView" customModule="WBooks" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="367" height="113"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H06-jV-LcL" id="Yc8-ln-Qlc">
@@ -51,6 +45,11 @@
                     <constraint firstItem="xwd-ro-OM6" firstAttribute="top" secondItem="Yc8-ln-Qlc" secondAttribute="top" constant="19" id="iwr-le-Fyd"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="commentUser" destination="Yub-5f-wIp" id="GGe-Ct-3HB"/>
+                <outlet property="nameUser" destination="xwd-ro-OM6" id="zXU-KX-0h7"/>
+                <outlet property="userImage" destination="zsa-e6-OH2" id="ZMy-C3-QeT"/>
+            </connections>
             <point key="canvasLocation" x="-705.07246376811599" y="-77.34375"/>
         </tableViewCell>
     </objects>
