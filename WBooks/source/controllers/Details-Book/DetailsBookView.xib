@@ -42,8 +42,8 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yEO-4h-fwv">
                                             <rect key="frame" x="104" y="8" width="254" height="123"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehs-ry-P3E">
-                                                    <rect key="frame" x="16" y="8" width="46" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehs-ry-P3E">
+                                                    <rect key="frame" x="16" y="8" width="36.5" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="6eA-y2-TIQ"/>
                                                     </constraints>
@@ -152,7 +152,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-yp-hCG">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-yp-hCG" customClass="CommentsView" customModule="WBooks" customModuleProvider="target">
                     <rect key="frame" x="20" y="342" width="374" height="520"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>

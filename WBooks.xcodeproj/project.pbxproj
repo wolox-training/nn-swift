@@ -12,19 +12,20 @@
 		9900045126C0D48800FF06D1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900044F26C0D48800FF06D1 /* TableViewCell.swift */; };
 		9900045226C0D48800FF06D1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9900045026C0D48800FF06D1 /* TableViewCell.xib */; };
 		9906394826C2514800E3609D /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906394726C2514800E3609D /* BookModel.swift */; };
-		9906394E26C304E400E3609D /* DetailsBookViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906394C26C304E400E3609D /* DetailsBookViewControlller.swift */; };
-		9906394F26C304E400E3609D /* DetailsBook.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9906394D26C304E400E3609D /* DetailsBook.xib */; };
+		9906394E26C304E400E3609D /* DetailsBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906394C26C304E400E3609D /* DetailsBookViewController.swift */; };
+		9906394F26C304E400E3609D /* DetailsBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9906394D26C304E400E3609D /* DetailsBookView.xib */; };
 		9906395826C3959E00E3609D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906395626C3959E00E3609D /* NavigationBar.swift */; };
 		9906395926C3959E00E3609D /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9906395726C3959E00E3609D /* NavigationBar.xib */; };
 		9906395A26C4352D00E3609D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9906395C26C4352D00E3609D /* Localizable.strings */; };
 		994A4D6326C44D2600669237 /* WBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A4D6226C44D2600669237 /* WBooksViewController.swift */; };
 		9960975026CD5603003D4977 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960974E26CD5603003D4977 /* CommentsViewController.swift */; };
-		9960975126CD5603003D4977 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9960974F26CD5603003D4977 /* CommentsViewController.xib */; };
+		9960975126CD5603003D4977 /* CommentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9960974F26CD5603003D4977 /* CommentsView.xib */; };
 		9960975326CD5662003D4977 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960975226CD5662003D4977 /* CommentsView.swift */; };
 		9960975526CD5BF3003D4977 /* DetailsBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960975426CD5BF3003D4977 /* DetailsBookView.swift */; };
 		9960975826CD5DF3003D4977 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960975726CD5DF3003D4977 /* DetailsViewController.swift */; };
 		9960975926CD5E4C003D4977 /* ScrollStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960974B26CD5422003D4977 /* ScrollStackViewController.swift */; };
 		9960975D26CD626E003D4977 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960975C26CD626E003D4977 /* NibView.swift */; };
+		9960976026CE1A34003D4977 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960975F26CE1A34003D4977 /* CommentsViewModel.swift */; };
 		99732D5F26B478F600FB9033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D5E26B478F600FB9033 /* AppDelegate.swift */; };
 		99732D6126B478F600FB9033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D6026B478F600FB9033 /* SceneDelegate.swift */; };
 		99732D6626B478F600FB9033 /* ListBooks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99732D6426B478F600FB9033 /* ListBooks.storyboard */; };
@@ -68,8 +69,8 @@
 		9900044F26C0D48800FF06D1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9900045026C0D48800FF06D1 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		9906394726C2514800E3609D /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
-		9906394C26C304E400E3609D /* DetailsBookViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBookViewControlller.swift; sourceTree = "<group>"; };
-		9906394D26C304E400E3609D /* DetailsBook.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsBook.xib; sourceTree = "<group>"; };
+		9906394C26C304E400E3609D /* DetailsBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBookViewController.swift; sourceTree = "<group>"; };
+		9906394D26C304E400E3609D /* DetailsBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsBookView.xib; sourceTree = "<group>"; };
 		9906395626C3959E00E3609D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		9906395726C3959E00E3609D /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		9906395B26C4352D00E3609D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -77,11 +78,12 @@
 		994A4D6226C44D2600669237 /* WBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksViewController.swift; sourceTree = "<group>"; };
 		9960974B26CD5422003D4977 /* ScrollStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStackViewController.swift; sourceTree = "<group>"; };
 		9960974E26CD5603003D4977 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
-		9960974F26CD5603003D4977 /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
+		9960974F26CD5603003D4977 /* CommentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsView.xib; sourceTree = "<group>"; };
 		9960975226CD5662003D4977 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		9960975426CD5BF3003D4977 /* DetailsBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBookView.swift; sourceTree = "<group>"; };
 		9960975726CD5DF3003D4977 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9960975C26CD626E003D4977 /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		9960975F26CE1A34003D4977 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
 		99732D5B26B478F600FB9033 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99732D5E26B478F600FB9033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99732D6026B478F600FB9033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,8 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				9960975626CD5C08003D4977 /* Comments */,
-				9906394C26C304E400E3609D /* DetailsBookViewControlller.swift */,
-				9906394D26C304E400E3609D /* DetailsBook.xib */,
+				9906394C26C304E400E3609D /* DetailsBookViewController.swift */,
+				9906394D26C304E400E3609D /* DetailsBookView.xib */,
 				9960975426CD5BF3003D4977 /* DetailsBookView.swift */,
 				9960975726CD5DF3003D4977 /* DetailsViewController.swift */,
 			);
@@ -228,8 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				9960974E26CD5603003D4977 /* CommentsViewController.swift */,
-				9960974F26CD5603003D4977 /* CommentsViewController.xib */,
+				9960974F26CD5603003D4977 /* CommentsView.xib */,
 				9960975226CD5662003D4977 /* CommentsView.swift */,
+				9960975F26CE1A34003D4977 /* CommentsViewModel.swift */,
 				99DB3EF726CC0296007B4EC9 /* CommentsCell */,
 			);
 			path = Comments;
@@ -487,8 +490,8 @@
 			files = (
 				9906395A26C4352D00E3609D /* Localizable.strings in Resources */,
 				99DB3EF026C7012B007B4EC9 /* CommentsCellView.xib in Resources */,
-				9960975126CD5603003D4977 /* CommentsViewController.xib in Resources */,
-				9906394F26C304E400E3609D /* DetailsBook.xib in Resources */,
+				9960975126CD5603003D4977 /* CommentsView.xib in Resources */,
+				9906394F26C304E400E3609D /* DetailsBookView.xib in Resources */,
 				99732D6B26B478FB00FB9033 /* LaunchScreen.storyboard in Resources */,
 				9906395926C3959E00E3609D /* NavigationBar.xib in Resources */,
 				9900045226C0D48800FF06D1 /* TableViewCell.xib in Resources */,
@@ -630,13 +633,14 @@
 				99DB3EF426CB78C2007B4EC9 /* TabBarController.swift in Sources */,
 				99732D5F26B478F600FB9033 /* AppDelegate.swift in Sources */,
 				9906395826C3959E00E3609D /* NavigationBar.swift in Sources */,
-				9906394E26C304E400E3609D /* DetailsBookViewControlller.swift in Sources */,
+				9906394E26C304E400E3609D /* DetailsBookViewController.swift in Sources */,
 				9960975526CD5BF3003D4977 /* DetailsBookView.swift in Sources */,
 				994A4D6326C44D2600669237 /* WBooksViewController.swift in Sources */,
 				9960975826CD5DF3003D4977 /* DetailsViewController.swift in Sources */,
 				99732D6126B478F600FB9033 /* SceneDelegate.swift in Sources */,
 				9906394826C2514800E3609D /* BookModel.swift in Sources */,
 				9960975926CD5E4C003D4977 /* ScrollStackViewController.swift in Sources */,
+				9960976026CE1A34003D4977 /* CommentsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

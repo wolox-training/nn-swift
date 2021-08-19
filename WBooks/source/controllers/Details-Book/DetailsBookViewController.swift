@@ -1,5 +1,5 @@
 //
-//  DetailsBookViewControlller.swift
+//  DetailsBookViewController.swift
 //  WBooks
 //
 //  Created by noelia.nieres on 10/08/2021.
@@ -7,17 +7,15 @@
 
 import UIKit
 
-class DetailsBookViewControlller: WBooksViewController {
+class DetailsBookViewController: WBooksViewController {
     
-    var imageName: String!
-    var titleB: String!
     private let detailsBookView = DetailsBookView()
-    
-    let titles = ["A Little Bird Told Me", "When the Doves Disappeared", "The Best Book in the World", "Be Creative", "Redesign the Web" ]
-    
-    let subTitles = ["Timothy Cross", "Sofi Oksanen", "Peter Sjernstrom", "Tony Alcazar","Liliana Castilla"]
-    
-    init() {
+    private let image: String
+    private let titleBook: String
+        
+    init(_ image: String, titleBook: String) {
+        self.image = image
+        self.titleBook = titleBook
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,11 +25,16 @@ class DetailsBookViewControlller: WBooksViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
     override func loadView() {
         super.loadView()
         view = detailsBookView
+    }
+    func setupView(){
+        detailsBookView.titleBook.text = titleBook
+        detailsBookView.detailImage.image = UIImage(named: image)
     }
 }
 

@@ -33,7 +33,7 @@ class ListBooksController: WBooksViewController {
         tableView.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9647058824, blue: 0.9803921569, alpha: 1)
         tableView.rowHeight = UITableView.automaticDimension
         let nibName = UINib(nibName: "TableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
+        tableView.register(nibName, forCellReuseIdentifier: "TableViewCell")
     }
 }
 
@@ -49,7 +49,7 @@ extension ListBooksController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         cell.commonInit("img_book\(indexPath.item+1)", title: titles[indexPath.item], sub: subTitles[indexPath.item])
         return cell
     }
@@ -57,15 +57,12 @@ extension ListBooksController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-    
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let details = DetailsViewController("img_book\(indexPath.item+1)", titleBook: titles[indexPath.item])
         self.navigationController?.pushViewController(details, animated: true)
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
-    
 }
 
 

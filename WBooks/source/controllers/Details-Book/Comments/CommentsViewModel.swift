@@ -1,14 +1,14 @@
 //
-//  DetailsViewController.swift
+//  CommentsViewModel.swift
 //  WBooks
 //
-//  Created by noelia.nieres on 18/08/2021.
+//  Created by noelia.nieres on 19/08/2021.
 //
 
 import UIKit
 
-class DetailsViewController: ScrollStackViewController {
-    
+class CommentsViewModel: ScrollStackViewController {
+
     private let image: String
     private let titleBook: String
     
@@ -21,9 +21,5 @@ class DetailsViewController: ScrollStackViewController {
         self.titleBook = titleBook
         super.init(nibName: nil, bundle: nil)
     }
-    
-    override func addChildrenViewControllers(){
-        add(DetailsBookViewController(image, titleBook: titleBook))
-        add(CommentsViewController())
-    }
+
 }

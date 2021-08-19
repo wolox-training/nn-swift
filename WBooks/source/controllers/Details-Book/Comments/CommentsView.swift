@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 
-final class CommentsView: UITableView {
+/*final class CommentsView: UITableView {
     
     
+}*/
+
+class CommentsView: NibView {
+    @IBOutlet weak var TableViewComments: UITableView!
 }
+
