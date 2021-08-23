@@ -8,23 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Books Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="listbook" id="BYZ-38-t0r" customClass="ListBooksController" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listbook" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PxK-hG-nSM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="Ffj-Ok-86G"/>
-                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="mVC-zi-daw"/>
-                                </connections>
-                            </tableView>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-Pl-HSG" customClass="NavigationBar" customModule="WBooks" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -42,9 +33,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TmT-BV-ehH"/>
-                    <connections>
-                        <outlet property="tableView" destination="PxK-hG-nSM" id="XVQ-Cr-m0t"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

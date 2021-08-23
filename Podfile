@@ -6,7 +6,9 @@ target 'WBooks' do
 
   # Pods for WBooks
   pod 'Alamofire', '~> 5.2'
-
+  pod 'NotificationBannerSwift', '~> 3.0.0'
+  pod 'SVProgressHUD'
+  
   target 'WBooksTests' do
     inherit! :search_paths
     # Pods for testing

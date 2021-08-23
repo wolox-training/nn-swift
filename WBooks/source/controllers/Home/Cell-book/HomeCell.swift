@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  HomeCell.swift
 //  WBooks
 //
 //  Created by noelia.nieres on 09/08/2021.
@@ -7,7 +7,14 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+extension UITableViewCell {
+    static var identifier: String {
+        String(describing: self)
+    }
+}
+
+
+class HomeCell: UITableViewCell {
     
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -40,6 +47,13 @@ class TableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func configureWith(_ book: Book) {
+        print("configureWith")
+        logoImage.image = UIImage(named: book.image)
+        titleLabel.text = book.title
+        subLabel.text = book.genre
+        
+    }
     func commonInit(_ imageName: String, title: String, sub: String){
         logoImage.image = UIImage(named: imageName)
         titleLabel.text = title
