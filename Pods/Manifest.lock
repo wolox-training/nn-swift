@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.4.3)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
   - MarqueeLabel (4.0.5)
   - NotificationBannerSwift (3.0.6):
     - MarqueeLabel (~> 4.0.5)
@@ -9,12 +12,14 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Kingfisher (~> 5.0)
   - NotificationBannerSwift (~> 3.0.0)
   - SVProgressHUD
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - MarqueeLabel
     - NotificationBannerSwift
     - SnapKit
@@ -22,11 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 78258bf9c2a6a11c722299ae584c5114af35e351
+PODFILE CHECKSUM: 12475d9f6b3d5e410aa2236095dc9dcaf2b7e4e7
 
 COCOAPODS: 1.11.0.beta.2

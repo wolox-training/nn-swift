@@ -34,9 +34,6 @@ extension BookDataSource: UITableViewDataSource {
         bookCell.configureWith(books[indexPath.row])
         return bookCell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

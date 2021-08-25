@@ -8,6 +8,7 @@ target 'WBooks' do
   pod 'Alamofire', '~> 5.2'
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'SVProgressHUD'
+  pod 'Kingfisher', '~> 5.0'
   
   target 'WBooksTests' do
     inherit! :search_paths

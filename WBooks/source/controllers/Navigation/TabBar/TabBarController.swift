@@ -14,8 +14,7 @@ class TabBarController: UITabBarController {
 
         tabBar.barTintColor = .white
         
-        let vc1 = UIStoryboard(name: "ListBooks", bundle: nil).instantiateViewController(withIdentifier: "listbook")
-        let home = UINavigationController(rootViewController: vc1)
+        let home = HomeViewController()
         home.tabBarItem = UITabBarItem()
         home.tabBarItem.title = title
         home.tabBarItem.image = UIImage(named: "ic_library active.png")

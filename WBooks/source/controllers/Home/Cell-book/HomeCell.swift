@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 extension UITableViewCell {
     static var identifier: String {
@@ -48,15 +49,15 @@ class HomeCell: UITableViewCell {
     }
     
     func configureWith(_ book: Book) {
-        print("configureWith")
-        logoImage.image = UIImage(named: book.image)
         titleLabel.text = book.title
         subLabel.text = book.genre
-        
-    }
-    func commonInit(_ imageName: String, title: String, sub: String){
-        logoImage.image = UIImage(named: imageName)
-        titleLabel.text = title
-        subLabel.text = sub
+        logoImage.kf.setImage(with: URL(string: book.image), completionHandler:  { [weak self] response in
+            switch response {
+            case .success:
+                self?.logoImage.contentMode = .scaleAspectFill
+            case .failure:
+                print("error")
+            }
+        })
     }
 }

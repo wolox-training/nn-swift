@@ -44,6 +44,7 @@
 		99732D7626B478FB00FB9033 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D7526B478FB00FB9033 /* WBooksTests.swift */; };
 		99732D8126B478FB00FB9033 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D8026B478FB00FB9033 /* WBooksUITests.swift */; };
 		999D9B3B26C0DBB7001A154B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D9B3A26C0DBB7001A154B /* HomeViewController.swift */; };
+		99BC02E226D6936900688075 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BC02E126D6936900688075 /* Kingfisher.framework */; };
 		99DB3EEF26C7012B007B4EC9 /* CommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */; };
 		99DB3EF026C7012B007B4EC9 /* CommentsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DB3EEE26C7012B007B4EC9 /* CommentsCellView.xib */; };
 		99DB3EF426CB78C2007B4EC9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EF326CB78C2007B4EC9 /* TabBarController.swift */; };
@@ -123,6 +124,7 @@
 		99732D8026B478FB00FB9033 /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		99732D8226B478FB00FB9033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		999D9B3A26C0DBB7001A154B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		99BC02E126D6936900688075 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DB3EEB26C6C02B007B4EC9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCellView.swift; sourceTree = "<group>"; };
 		99DB3EEE26C7012B007B4EC9 /* CommentsCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsCellView.xib; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BC02E226D6936900688075 /* Kingfisher.framework in Frameworks */,
 				9960977F26D03C17003D4977 /* NotificationBannerSwift.framework in Frameworks */,
 				9960976F26D026F1003D4977 /* SVProgressHUD.framework in Frameworks */,
 				9960976526CEEF50003D4977 /* Alamofire.framework in Frameworks */,
@@ -170,6 +173,7 @@
 		66488C65DDAEB2DA9F78AEE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99BC02E126D6936900688075 /* Kingfisher.framework */,
 				9960977E26D03C17003D4977 /* NotificationBannerSwift.framework */,
 				9960977826D0377B003D4977 /* NotificationBannerSwift.framework */,
 				9960977626D03768003D4977 /* NotificationBannerSwift.framework */,
