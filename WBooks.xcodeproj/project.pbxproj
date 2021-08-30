@@ -36,7 +36,6 @@
 		9960977526D02BEA003D4977 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9960977326D02BEA003D4977 /* HomeView.xib */; };
 		9960977F26D03C17003D4977 /* NotificationBannerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9960977E26D03C17003D4977 /* NotificationBannerSwift.framework */; };
 		99732D5F26B478F600FB9033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D5E26B478F600FB9033 /* AppDelegate.swift */; };
-		99732D6126B478F600FB9033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D6026B478F600FB9033 /* SceneDelegate.swift */; };
 		99732D6826B478FB00FB9033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99732D6726B478FB00FB9033 /* Assets.xcassets */; };
 		99732D6B26B478FB00FB9033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99732D6926B478FB00FB9033 /* LaunchScreen.storyboard */; };
 		99732D7626B478FB00FB9033 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D7526B478FB00FB9033 /* WBooksTests.swift */; };
@@ -110,7 +109,6 @@
 		9960977E26D03C17003D4977 /* NotificationBannerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NotificationBannerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99732D5B26B478F600FB9033 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99732D5E26B478F600FB9033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99732D6026B478F600FB9033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		99732D6726B478FB00FB9033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99732D6A26B478FB00FB9033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99732D6C26B478FB00FB9033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -383,7 +381,6 @@
 		999D9B4026C17CFB001A154B /* core */ = {
 			isa = PBXGroup;
 			children = (
-				99732D6026B478F600FB9033 /* SceneDelegate.swift */,
 				99732D5E26B478F600FB9033 /* AppDelegate.swift */,
 			);
 			path = core;
@@ -693,7 +690,6 @@
 				9960976B26D021B5003D4977 /* BookDataSource.swift in Sources */,
 				9960975826CD5DF3003D4977 /* DetailsViewController.swift in Sources */,
 				9960977426D02BEA003D4977 /* HomeView.swift in Sources */,
-				99732D6126B478F600FB9033 /* SceneDelegate.swift in Sources */,
 				9906394826C2514800E3609D /* Book.swift in Sources */,
 				9960975926CD5E4C003D4977 /* ScrollStackViewController.swift in Sources */,
 				9960976026CE1A34003D4977 /* CommentsViewModel.swift in Sources */,
