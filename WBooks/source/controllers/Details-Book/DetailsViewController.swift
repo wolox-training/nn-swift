@@ -9,21 +9,16 @@ import UIKit
 
 class DetailsViewController: ScrollStackViewController {
     
-    private let image: String
-    private let titleBook: String
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(_ image: String, titleBook: String) {
-        self.image = image
-        self.titleBook = titleBook
-        super.init(nibName: nil, bundle: nil)
-    }
-    
     override func addChildrenViewControllers(){
-        add(DetailsBookViewController(image, titleBook: titleBook))
+        add(DetailsBookViewController())
         add(CommentsViewController())
     }
 }

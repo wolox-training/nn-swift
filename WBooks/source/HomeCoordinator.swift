@@ -31,6 +31,13 @@ final class HomeCoordinator: Coordinator {
         navigationController.viewControllers = [vc]
     }
     
+    func details() {
+        let vc = DetailsViewController()
+        vc.coordinator = self
+        navigationController.isNavigationBarHidden = false
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     /*func newPost() {
         let vc = NewPostViewController()
         vc.coordinator = self

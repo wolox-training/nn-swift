@@ -7,19 +7,25 @@
 
 import UIKit
 
-class CommentsViewModel: ScrollStackViewController {
+protocol CommentsViewModelProtocol {
+    func getComments(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void)
+ 
+}
 
-    private let image: String
-    private let titleBook: String
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+final class CommentsViewModel: CommentsViewModelProtocol {
+    private let repository: BookRepositoryType
+
+    init(repository: BookRepositoryType = BookRepository()) {
+        self.repository = repository
     }
     
-    init(_ image: String, titleBook: String) {
-        self.image = image
-        self.titleBook = titleBook
-        super.init(nibName: nil, bundle: nil)
+    func getComments(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void) {
+        repository.getComments(id) { errorMessage in
+            onError(errorMessage)
+        } onSuccess: { comments in
+            onSuccess(comments)
+        }
     }
+        
 
 }

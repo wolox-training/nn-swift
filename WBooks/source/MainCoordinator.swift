@@ -28,15 +28,15 @@ final class MainCoordinator: Coordinator {
         vc.title = "Login"
         navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
-    }
+    }*/
     
-    func register() {
-        let vc = RegisterViewController()
+    func details() {
+        let vc = WishListController()
         vc.coordinator = self
         vc.title = "Sign Up"
         navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
-    }*/
+    }
     
     func start() {
         let child = HomeCoordinator(navigationController: navigationController)

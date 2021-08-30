@@ -25,25 +25,6 @@ struct ErrorResponse: Codable {
     let error: String
 }
 
-final class TokenManager {
-    private var token: String = ""
-    
-    static var shared: TokenManager = {
-        let instance = TokenManager()
-        return instance
-    }()
-    
-    private init() {}
-    
-    func setToken(_ token: String) {
-        self.token = token
-    }
-    
-    func getToken() -> String {
-        return token
-    }
-}
-
 struct BookRequest: Codable {
     let text: String
     let imageUrl: String?
@@ -57,7 +38,7 @@ protocol BookRepositoryType {
     
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void)
     
-    func deleteBook(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping () -> Void)
+    func getComments(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void)
 }
 
 final class BookRepository: BookRepositoryType {
@@ -65,9 +46,8 @@ final class BookRepository: BookRepositoryType {
                   onError: @escaping (Error) -> Void,
                   onSuccess: @escaping (Book) -> Void) {
         
-        let header = HTTPHeaders(arrayLiteral: HTTPHeader.authorization(TokenManager.shared.getToken()))
         AF.request(Endpoint.books, method: .post, parameters: body,
-                   encoder: JSONParameterEncoder.default, headers: header)
+                   encoder: JSONParameterEncoder.default, headers: nil)
             .validate()
             .responseDecodable(of: Book.self) { response in
                 switch response.result {
@@ -98,16 +78,26 @@ final class BookRepository: BookRepositoryType {
             }
     }
     
-    func deleteBook(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping () -> Void) {
-        let header = HTTPHeaders(arrayLiteral: HTTPHeader.authorization(TokenManager.shared.getToken()))
-        let endpoint = Endpoint.deleteBook + id
-        AF.request(endpoint, method: .delete, headers: header)
+
+    func getComments(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void) {
+    
+        let ruta = Endpoint.books + "/\(id )/comments"
+        print(ruta, " ruta")
+        
+         let endpoint = URL(string: ruta)!
+         var request = URLRequest(url: endpoint)
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        
+        AF.request(endpoint, method: .get, headers: nil)
             .validate()
-            .responseDecodable(of: GeneralResponse.self) { response in
+            .responseDecodable(of: [Comment].self) { response in
                 switch response.result {
-                case .success:
-                    onSuccess()
+                case .success(let comment):
+                    onSuccess(comment)
                 case .failure(let error):
+                    print(error)
                     onError(error.localizedDescription)
                 }
             }

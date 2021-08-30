@@ -8,12 +8,17 @@
 import Foundation
 import UIKit
 
-/*final class CommentsView: UITableView {
-    
-    
-}*/
+protocol CommentsViewProtocol: UIView {
+    var commentTable: UITableView { get }
 
-class CommentsView: NibView {
-    @IBOutlet weak var TableViewComments: UITableView!
 }
 
+class CommentsView: NibView {
+    @IBOutlet weak var commentsTable: UITableView!
+}
+
+
+extension CommentsView: CommentsViewProtocol {
+    var commentTable: UITableView { commentsTable }
+    
+}

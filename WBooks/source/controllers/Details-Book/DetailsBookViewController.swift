@@ -9,13 +9,11 @@ import UIKit
 
 class DetailsBookViewController: WBooksViewController {
     
-    private let detailsBookView = DetailsBookView()
-    private let image: String
-    private let titleBook: String
-        
-    init(_ image: String, titleBook: String) {
-        self.image = image
-        self.titleBook = titleBook
+    private let detailsView: DetailsBookViewProtocol
+    
+    // MARK: - Initializer
+    init(view: DetailsBookViewProtocol = DetailsBookView()) {
+        detailsView = view
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -25,16 +23,18 @@ class DetailsBookViewController: WBooksViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
     }
     
     override func loadView() {
         super.loadView()
-        view = detailsBookView
+        view = detailsView
     }
-    func setupView(){
-        detailsBookView.titleBook.text = titleBook
-        detailsBookView.detailImage.image = UIImage(named: image)
+    
+    func configureWith(_ book: Book) {
+        detailsView.setTitleValue(book.title)
+        detailsView.setEditorialValue(book.genre)
+        detailsView.setAuthorValue(book.author)
+        detailsView.setYearValue(book.year)
+        detailsView.setImage(book.image)
     }
 }
-

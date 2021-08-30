@@ -28,11 +28,17 @@ class CommentsCellView: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func commonInit(_ imageName: String, title: String, sub: String){
-        userImage.image = UIImage(named: imageName)
-        nameUser.text = title
-        commentUser.text = sub
-        //self.comment = sub
+    func configureWith(_ comment: Comment) {
+        nameUser.text = "PRUEBA"
+        commentUser.text = comment.content
+        /*userImage.kf.setImage(with: URL(string: comment.user.imageURL), completionHandler:  { [weak self] response in
+            switch response {
+            case .success:
+                self?.userImage.contentMode = .scaleAspectFill
+            case .failure:
+                print("error")
+            }
+        })*/
     }
 }
 

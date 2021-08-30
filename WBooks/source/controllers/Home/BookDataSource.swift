@@ -12,11 +12,11 @@ final class BookDataSource: NSObject {
     //private let userEmail = UserDefaults.standard.string(forKey: "email") ?? ""
     
     // MARK: Public properties
-    var books: [Book] = []
+    //var books: [Book] = []
     
 }
 
-extension BookDataSource: UITableViewDataSource {
+/*extension BookDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(books, "books")
         return books.count
@@ -45,4 +45,4 @@ extension BookDataSource: UITableViewDataSource {
         self.tableView.deselectRow(at: indexPath, animated: true)
     }*/
     
-}
+}*/

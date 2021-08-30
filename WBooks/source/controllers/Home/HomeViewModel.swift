@@ -14,10 +14,11 @@ protocol HomeViewModelProtocol {
 
 final class HomeViewModel: HomeViewModelProtocol {
     private let repository: BookRepositoryType
-    
+
     init(repository: BookRepositoryType = BookRepository()) {
         self.repository = repository
     }
+    
     
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void) {
         repository.getBooks { errorMessage in

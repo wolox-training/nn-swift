@@ -38,6 +38,7 @@ class TabBarController: UITabBarController {
 }
 
 class WishListController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
