@@ -21,27 +21,25 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    @IBOutlet weak var borderView: UIView!{
+        didSet {
+            borderView.layer.cornerRadius = 5
+            borderView.backgroundColor = .white
+            borderView.layer.cornerRadius = 20
+            borderView.layer.borderWidth = 1
+            borderView.clipsToBounds = true
+        }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    @IBOutlet weak var cellBackground: UIView!{
+        didSet {
+            cellBackground.backgroundColor = .backgroundPolar()
 
-        //let margins = UIEdgeInsets(top: 8, left:15, bottom: 8, right: 50)
-        //contentView.frame = contentView.frame.inset(by: margins)
-        
-        let padding = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 50)
-        contentView.frame = bounds.inset(by: padding)
-        
-        self.contentView.layer.borderColor = UIColor.white.cgColor
-        self.contentView.layer.borderWidth = 1
-        self.contentView.layer.cornerRadius = 8
-        //self.contentView.clipsToBounds = true
-        
-        self.contentView.backgroundColor = .white
-        self.backgroundColor = .clear
-   
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

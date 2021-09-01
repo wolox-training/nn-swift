@@ -12,13 +12,9 @@ class WBooksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let navController = navigationController {
+        /*if let navController = navigationController {
              System.clearNavigationBar(forBar: navController.navigationBar)
              navController.view.backgroundColor = .clear
-                
-         }
-         
+         }*/
     }
-
-
 }

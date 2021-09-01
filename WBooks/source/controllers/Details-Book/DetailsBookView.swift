@@ -6,6 +6,17 @@
 //
 
 import UIKit
+import Kingfisher
+
+extension UIColor {
+    static func cerulean() -> UIColor {
+        return UIColor(red: 0.00, green: 0.68, blue: 0.93, alpha: 1)
+    }
+    static func backgroundPolar() -> UIColor {
+        return UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
+    }
+}
+
 
 protocol DetailsBookViewProtocol: UIView {
     func setTitleValue(_ valor: String)
@@ -25,6 +36,21 @@ class DetailsBookView: NibView {
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var editorial: UILabel!
 
+    @IBOutlet weak var rentButton: UIButton!{
+        didSet {
+            rentButton.layer.cornerRadius = 20
+            rentButton.layer.borderWidth = 1
+            rentButton.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var wishButton: UIButton! {
+        didSet {
+            wishButton.layer.cornerRadius = 20
+            wishButton.layer.borderWidth = 1
+            wishButton.layer.borderColor = UIColor.cerulean().cgColor
+            wishButton.setTitleColor(.cerulean(), for: .normal)
+        }
+    }
 }
 
 extension DetailsBookView: DetailsBookViewProtocol {
@@ -43,6 +69,13 @@ extension DetailsBookView: DetailsBookViewProtocol {
     }
     func setImage(_ image: String) {
         //detailImage.isHidden = false
-        detailImage.image = UIImage(named:image)
+        detailImage.kf.setImage(with: URL(string: image), completionHandler:  { [weak self] response in
+            switch response {
+            case .success:
+                self?.detailImage.contentMode = .scaleAspectFill
+            case .failure:
+                print("error")
+            }
+        })
     }
 }

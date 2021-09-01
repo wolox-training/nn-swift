@@ -14,13 +14,13 @@ class TabBarController: UITabBarController {
 
         tabBar.barTintColor = .white
         
-        let home = HomeViewController()
+        let home =  CustomNavigationController(rootViewController: HomeViewController())
         home.tabBarItem = UITabBarItem()
         home.tabBarItem.title = title
         home.tabBarItem.image = UIImage(named: "ic_library active.png")
         home.tabBarItem.tag = 0
         
-        let wishList = WishListController()
+        let wishList = CustomNavigationController(rootViewController: WishListController())
         wishList.tabBarItem = UITabBarItem()
         wishList.tabBarItem.title = title
         wishList.tabBarItem.image = UIImage(named: "ic_wishlist active.png")

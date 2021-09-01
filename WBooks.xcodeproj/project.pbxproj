@@ -29,7 +29,6 @@
 		9960976026CE1A34003D4977 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960975F26CE1A34003D4977 /* CommentsViewModel.swift */; };
 		9960976326CEC341003D4977 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960976226CEC341003D4977 /* BookRepository.swift */; };
 		9960976526CEEF50003D4977 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9960976426CEEF50003D4977 /* Alamofire.framework */; };
-		9960976B26D021B5003D4977 /* BookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960976A26D021B5003D4977 /* BookDataSource.swift */; };
 		9960976D26D0224A003D4977 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960976C26D0224A003D4977 /* HomeViewModel.swift */; };
 		9960976F26D026F1003D4977 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9960976E26D026F1003D4977 /* SVProgressHUD.framework */; };
 		9960977426D02BEA003D4977 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960977226D02BEA003D4977 /* HomeView.swift */; };
@@ -46,6 +45,10 @@
 		99DB3EEF26C7012B007B4EC9 /* CommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */; };
 		99DB3EF026C7012B007B4EC9 /* CommentsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DB3EEE26C7012B007B4EC9 /* CommentsCellView.xib */; };
 		99DB3EF426CB78C2007B4EC9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EF326CB78C2007B4EC9 /* TabBarController.swift */; };
+		99E6143B26DD8938004011D5 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6143A26DD8938004011D5 /* CustomNavigationController.swift */; };
+		99E6143F26DDCD97004011D5 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6143D26DDCD97004011D5 /* NewBookView.swift */; };
+		99E6144026DDCD97004011D5 /* NewBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E6143E26DDCD97004011D5 /* NewBookView.xib */; };
+		99E6144226DDD25F004011D5 /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6144126DDD25F004011D5 /* NewBookViewController.swift */; };
 		C2873CC7B23651358AA0B70E /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE0D24C41D26CE31CD3959B /* Pods_WBooks_WBooksUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,7 +101,6 @@
 		9960976426CEEF50003D4977 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960976626CF0869003D4977 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960976826CF0870003D4977 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9960976A26D021B5003D4977 /* BookDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataSource.swift; sourceTree = "<group>"; };
 		9960976C26D0224A003D4977 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9960976E26D026F1003D4977 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960977026D026F6003D4977 /* NotificationBannerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NotificationBannerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,10 @@
 		99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCellView.swift; sourceTree = "<group>"; };
 		99DB3EEE26C7012B007B4EC9 /* CommentsCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsCellView.xib; sourceTree = "<group>"; };
 		99DB3EF326CB78C2007B4EC9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		99E6143A26DD8938004011D5 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		99E6143D26DDCD97004011D5 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
+		99E6143E26DDCD97004011D5 /* NewBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBookView.xib; sourceTree = "<group>"; };
+		99E6144126DDD25F004011D5 /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
 		9E0C5701CBAA71408271B781 /* Pods-WBooksTests.release(development) .xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release(development) .xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release(development) .xcconfig"; sourceTree = "<group>"; };
 		AAB165C1B5FBD09790DAF7C1 /* Pods-WBooks.release(production) .xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.release(production) .xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.release(production) .xcconfig"; sourceTree = "<group>"; };
 		AC63A34E1D71B2DF0689AAB0 /* Pods-WBooks-WBooksUITests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug(production).xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug(production).xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +246,7 @@
 				9906395626C3959E00E3609D /* NavigationBar.swift */,
 				9906395726C3959E00E3609D /* NavigationBar.xib */,
 				994A4D6226C44D2600669237 /* WBooksViewController.swift */,
+				99E6143A26DD8938004011D5 /* CustomNavigationController.swift */,
 			);
 			path = NavigationBar;
 			sourceTree = "<group>";
@@ -357,6 +364,8 @@
 		999D9B3E26C17C99001A154B /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				99E6144326DF2ABC004011D5 /* Custom */,
+				99E6143C26DDCD5A004011D5 /* NewBook */,
 				9960974D26CD54BA003D4977 /* Navigation */,
 				9960974A26CD53FB003D4977 /* Commons */,
 				9906394426C23D3200E3609D /* Details-Book */,
@@ -370,7 +379,6 @@
 			children = (
 				9900044426BD95FF00FF06D1 /* Cell-book */,
 				999D9B3A26C0DBB7001A154B /* HomeViewController.swift */,
-				9960976A26D021B5003D4977 /* BookDataSource.swift */,
 				9960976C26D0224A003D4977 /* HomeViewModel.swift */,
 				9960977226D02BEA003D4977 /* HomeView.swift */,
 				9960977326D02BEA003D4977 /* HomeView.xib */,
@@ -426,6 +434,23 @@
 				99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */,
 			);
 			path = CommentsCell;
+			sourceTree = "<group>";
+		};
+		99E6143C26DDCD5A004011D5 /* NewBook */ = {
+			isa = PBXGroup;
+			children = (
+				99E6143D26DDCD97004011D5 /* NewBookView.swift */,
+				99E6143E26DDCD97004011D5 /* NewBookView.xib */,
+				99E6144126DDD25F004011D5 /* NewBookViewController.swift */,
+			);
+			path = NewBook;
+			sourceTree = "<group>";
+		};
+		99E6144326DF2ABC004011D5 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,6 +562,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E6144026DDCD97004011D5 /* NewBookView.xib in Resources */,
 				9906395A26C4352D00E3609D /* Localizable.strings in Resources */,
 				99DB3EF026C7012B007B4EC9 /* CommentsCellView.xib in Resources */,
 				9960975126CD5603003D4977 /* CommentsView.xib in Resources */,
@@ -673,21 +699,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E6143B26DD8938004011D5 /* CustomNavigationController.swift in Sources */,
 				9900045126C0D48800FF06D1 /* HomeCell.swift in Sources */,
 				999D9B3B26C0DBB7001A154B /* HomeViewController.swift in Sources */,
 				9960975326CD5662003D4977 /* CommentsView.swift in Sources */,
 				9960976D26D0224A003D4977 /* HomeViewModel.swift in Sources */,
 				9960975026CD5603003D4977 /* CommentsViewController.swift in Sources */,
 				99DB3EEF26C7012B007B4EC9 /* CommentsCellView.swift in Sources */,
+				99E6143F26DDCD97004011D5 /* NewBookView.swift in Sources */,
 				9960975D26CD626E003D4977 /* NibView.swift in Sources */,
 				99DB3EF426CB78C2007B4EC9 /* TabBarController.swift in Sources */,
+				99E6144226DDD25F004011D5 /* NewBookViewController.swift in Sources */,
 				99732D5F26B478F600FB9033 /* AppDelegate.swift in Sources */,
 				99304B0E26D97DF60059399E /* Comment.swift in Sources */,
 				9906395826C3959E00E3609D /* NavigationBar.swift in Sources */,
 				9906394E26C304E400E3609D /* DetailsBookViewController.swift in Sources */,
 				9960975526CD5BF3003D4977 /* DetailsBookView.swift in Sources */,
 				994A4D6326C44D2600669237 /* WBooksViewController.swift in Sources */,
-				9960976B26D021B5003D4977 /* BookDataSource.swift in Sources */,
 				9960975826CD5DF3003D4977 /* DetailsViewController.swift in Sources */,
 				9960977426D02BEA003D4977 /* HomeView.swift in Sources */,
 				9906394826C2514800E3609D /* Book.swift in Sources */,

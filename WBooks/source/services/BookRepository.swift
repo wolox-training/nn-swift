@@ -10,10 +10,8 @@ import Alamofire
 
 struct Endpoint {
     static let domain = "https://ios-training-backend.herokuapp.com/api/v1"
-    static let login = Endpoint.domain + "/auth"
-    static let register = Endpoint.domain + "/register"
     static let books = Endpoint.domain + "/books"
-    static let deleteBook = Endpoint.domain + "/books/"
+    static let user = Endpoint.domain + "/users/"
 }
 
 struct GeneralResponse: Codable {
@@ -38,7 +36,11 @@ protocol BookRepositoryType {
     
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void)
     
-    func getComments(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void)
+    func getBookComments(_ bookId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void)
+    
+    func getUser(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping (User) -> Void)
+    
+    func getUserComment(_ comment: Int, onError: @escaping (String) -> Void, onSuccess: @escaping (User) -> Void)
 }
 
 final class BookRepository: BookRepositoryType {
@@ -79,11 +81,10 @@ final class BookRepository: BookRepositoryType {
     }
     
 
-    func getComments(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void) {
+    func getBookComments(_ bookId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void) {
     
-        let ruta = Endpoint.books + "/\(id )/comments"
-        print(ruta, " ruta")
-        
+        let ruta = Endpoint.books + "/\(bookId )/comments"
+      
          let endpoint = URL(string: ruta)!
          var request = URLRequest(url: endpoint)
          request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -95,7 +96,55 @@ final class BookRepository: BookRepositoryType {
             .responseDecodable(of: [Comment].self) { response in
                 switch response.result {
                 case .success(let comment):
+                    print(comment, "comments")
                     onSuccess(comment)
+                case .failure(let error):
+                    print(error)
+                    onError(error.localizedDescription)
+                }
+            }
+    }
+    
+    func getUserComment(_ comment: Int, onError: @escaping (String) -> Void, onSuccess: @escaping (User) -> Void) {
+    
+        let ruta = Endpoint.user + "\(comment)"
+    
+         let endpoint = URL(string: ruta)!
+         var request = URLRequest(url: endpoint)
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        AF.request(endpoint, method: .get, headers: nil)
+            .validate()
+            .responseDecodable(of: User.self) { response in
+                switch response.result {
+                case .success(let user):
+                    //print(user, "usuario")
+                    onSuccess(user)
+                case .failure(let error):
+                    print(error)
+                    onError(error.localizedDescription)
+                }
+            }
+    }
+    
+    func getUser(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping (User) -> Void) {
+    
+        let ruta = Endpoint.user + "\(id )"
+        print(ruta, " ruta getuser")
+        
+         let endpoint = URL(string: ruta)!
+         var request = URLRequest(url: endpoint)
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        AF.request(endpoint, method: .get, headers: nil)
+            .validate()
+            .responseDecodable(of: User.self) { response in
+                switch response.result {
+                case .success(let user):
+                    //print(user, "usuario")
+                    onSuccess(user)
                 case .failure(let error):
                     print(error)
                     onError(error.localizedDescription)

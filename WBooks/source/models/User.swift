@@ -7,16 +7,17 @@
 
 import Foundation
 
-struct User {
-    var id: Int?
-    var username: String?
-    var password: String?
-    var image: String?
+public struct User: Codable {
+    let id: Int
+    let username: String
+    let password: String
+    let image: String
+
 }
 
 enum UserKey: String, CodingKey {
     case id = "id"
     case username = "username"
     case password = "password"
-    case image
+    case image = "image"
 }

@@ -12,11 +12,11 @@ class CommentsCellView: UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var nameUser: UILabel!
     @IBOutlet weak var commentUser: UILabel!
-    
-    var comment: String!
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        userImage.layer.cornerRadius = userImage.frame.size.width/2
     }
     
     override func layoutSubviews() {
@@ -28,17 +28,23 @@ class CommentsCellView: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureWith(_ comment: Comment) {
-        nameUser.text = "PRUEBA"
+    func configureWith(_ comment: Comment, _ user: [User]) {
+        print(user, "configureWith")
+        for item in user {
+            print(item, "item")
+            nameUser.text = item.username + " \(item.id)"
+            userImage.kf.setImage(with: URL(string: (item.image)), completionHandler:  { [weak self] response in
+                switch response {
+                case .success:
+                    self?.userImage.contentMode = .scaleAspectFill
+                case .failure:
+                    print("error")
+                }
+            })
+        }
+        
         commentUser.text = comment.content
-        /*userImage.kf.setImage(with: URL(string: comment.user.imageURL), completionHandler:  { [weak self] response in
-            switch response {
-            case .success:
-                self?.userImage.contentMode = .scaleAspectFill
-            case .failure:
-                print("error")
-            }
-        })*/
+        
     }
 }
 

@@ -24,19 +24,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="460" height="47"/>
                     <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXB-Nm-LdZ">
-                    <rect key="frame" x="20" y="44" width="18" height="18"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXB-Nm-LdZ">
+                    <rect key="frame" x="20" y="16" width="18" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="2e7-1y-TGT"/>
                         <constraint firstAttribute="width" constant="18" id="JOv-pd-c4Q"/>
                     </constraints>
                     <state key="normal" image="ic_notifications"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrJ-P3-Tga">
-                    <rect key="frame" x="432" y="51" width="18" height="18"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrJ-P3-Tga">
+                    <rect key="frame" x="432" y="17" width="18" height="18"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="18" id="JsQ-eA-x5V"/>
-                        <constraint firstAttribute="height" constant="18" id="twJ-hs-54c"/>
+                        <constraint firstAttribute="height" constant="18" id="DSZ-5c-RO8"/>
+                        <constraint firstAttribute="width" constant="18" id="i4g-9v-Cbe"/>
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" image="ic_search"/>
@@ -54,19 +54,19 @@
                 <constraint firstItem="s1f-di-Ib0" firstAttribute="centerX" secondItem="Nz2-th-XYs" secondAttribute="centerX" id="0G8-jo-g6T"/>
                 <constraint firstItem="UXB-Nm-LdZ" firstAttribute="leading" secondItem="AB3-JX-r91" secondAttribute="leading" constant="20" id="850-Lx-S49"/>
                 <constraint firstItem="s1f-di-Ib0" firstAttribute="top" secondItem="AB3-JX-r91" secondAttribute="top" constant="3" id="OLT-Vn-vPN"/>
-                <constraint firstItem="qrJ-P3-Tga" firstAttribute="top" secondItem="wpF-P1-aoN" secondAttribute="top" constant="7" id="PKg-8h-hkm"/>
                 <constraint firstItem="Nz2-th-XYs" firstAttribute="top" secondItem="AB3-JX-r91" secondAttribute="top" id="XMp-8k-x6d"/>
                 <constraint firstAttribute="bottom" secondItem="s1f-di-Ib0" secondAttribute="bottom" constant="3" id="fNu-ll-ttu"/>
-                <constraint firstItem="UXB-Nm-LdZ" firstAttribute="top" secondItem="wpF-P1-aoN" secondAttribute="top" id="ggb-Nh-Wz3"/>
+                <constraint firstItem="UXB-Nm-LdZ" firstAttribute="top" secondItem="wpF-P1-aoN" secondAttribute="top" constant="3" id="ggb-Nh-Wz3"/>
                 <constraint firstAttribute="bottom" secondItem="Nz2-th-XYs" secondAttribute="bottom" id="hOX-1Z-her"/>
+                <constraint firstItem="wpF-P1-aoN" firstAttribute="trailing" secondItem="qrJ-P3-Tga" secondAttribute="trailing" constant="10" id="niX-6l-D4m"/>
                 <constraint firstAttribute="trailing" secondItem="Nz2-th-XYs" secondAttribute="trailing" id="pbw-Zf-5Zk"/>
                 <constraint firstItem="Nz2-th-XYs" firstAttribute="leading" secondItem="AB3-JX-r91" secondAttribute="leading" id="sVI-tF-3CJ"/>
-                <constraint firstAttribute="trailing" secondItem="qrJ-P3-Tga" secondAttribute="trailing" constant="10" id="v3F-nR-JLg"/>
+                <constraint firstItem="qrJ-P3-Tga" firstAttribute="top" secondItem="wpF-P1-aoN" secondAttribute="top" constant="4" id="wRb-i1-bHe"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="77" y="26"/>
+            <point key="canvasLocation" x="78" y="25"/>
         </view>
     </objects>
     <resources>

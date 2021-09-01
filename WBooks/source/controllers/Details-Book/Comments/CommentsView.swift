@@ -10,11 +10,11 @@ import UIKit
 
 protocol CommentsViewProtocol: UIView {
     var commentTable: UITableView { get }
-
 }
 
 class CommentsView: NibView {
     @IBOutlet weak var commentsTable: UITableView!
+    
 }
 
 

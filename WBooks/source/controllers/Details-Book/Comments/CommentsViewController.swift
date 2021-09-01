@@ -17,7 +17,8 @@ final class CommentsViewController: UIViewController {
     private let commentView: CommentsViewProtocol
     
     var comments: [Comment] = []
-    
+    var users: [User] = []
+
     // MARK: - Initializers
     init(viewModel: CommentsViewModelProtocol = CommentsViewModel(),
          view: CommentsViewProtocol = CommentsView()) {
@@ -35,7 +36,6 @@ final class CommentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
-        getComments()
     }
     
     override func loadView() {
@@ -55,8 +55,11 @@ final class CommentsViewController: UIViewController {
         commentView.commentTable.delegate = self
         commentView.commentTable.separatorStyle = .none
         commentView.commentTable.showsVerticalScrollIndicator = false
-        commentView.commentTable.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9647058824, blue: 0.9803921569, alpha: 1)
+        //commentView.commentTable.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9647058824, blue: 0.9803921569, alpha: 1)
         commentView.commentTable.rowHeight = 120
+        commentView.commentTable.backgroundColor = .backgroundPolar()
+    
+        commentView.commentTable.isScrollEnabled = false
         
         let nib = UINib(nibName: "CommentsCellView", bundle: nil)
         commentView.commentTable.register(nib, forCellReuseIdentifier: "CommentsCellView")
@@ -64,20 +67,47 @@ final class CommentsViewController: UIViewController {
 
 }
 
-private extension CommentsViewController {
+extension CommentsViewController {
     // MARK: - Posts methods
-    func getComments() {
+    func getBookComments(_ bookId: Int) {
         SVProgressHUD.show()
-        viewModel.getComments("2", onError: errorComments(_:) , onSuccess: setComments(_:))
+        viewModel.getBookComments(bookId, onError: errorComments(_:) , onSuccess: setComments(_:))
 
     }
     func setComments(_ comments: [Comment]) {
         SVProgressHUD.dismiss()
         self.comments = comments
+        
         commentView.commentTable.reloadData()
+        
+        for item in self.comments {
+            getUser(item.user_id)
+        }
     }
     
     func errorComments(_ message: String) {
+        SVProgressHUD.dismiss()
+        NotificationBanner(title: "Error",
+                           subtitle: message,
+                           style: .warning).show()
+
+    }
+    
+    func getUser(_ comments: Int) {
+        SVProgressHUD.show()
+        viewModel.getUserComment(comments, onError: errorUser(_:) , onSuccess: setUser(_:))
+
+    }
+    func setUser(_ user: User) {
+        SVProgressHUD.dismiss()
+        self.users.append(user)
+        viewModel.setUsuarios(user)
+        print(self.users, "self.users")
+        
+        commentView.commentTable.reloadData()
+    }
+    
+    func errorUser(_ message: String) {
         SVProgressHUD.dismiss()
         NotificationBanner(title: "Error",
                            subtitle: message,
@@ -98,8 +128,7 @@ extension CommentsViewController: UITableViewDataSource, UITableViewDelegate {
               comments.indices.contains(indexPath.row) else {
             return UITableViewCell()
         }
-        
-        commentCell.configureWith(comments[indexPath.row])
+        commentCell.configureWith(comments[indexPath.row],self.users)
         return commentCell
     }
     func numberOfSections(in tableView: UITableView) -> Int {

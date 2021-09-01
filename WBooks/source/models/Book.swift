@@ -26,4 +26,40 @@ enum BookKey: String, CodingKey {
 }
 
 
+struct BookViewModel {
+    
+    let book: Book
+    
+    init(book: Book) {
+        self.book = book
+    }
+    
+    var bookId: String {
+        return String(book.id)
+    }
+    
+    var bookTitle: String {
+        return book.title
+    }
+    
+    var bookAuthor: String {
+        return book.author
+    }
+    
+    var bookGenre: String {
+        return book.genre
+    }
+    
+    var bookYear: String {
+        return book.year
+    }
+    
+    var bookImage: String {
+        return book.image
+    }
+    
+    var wished: Bool = false
+    var rented: Bool = false
+    
+}
 

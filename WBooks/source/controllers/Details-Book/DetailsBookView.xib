@@ -14,7 +14,9 @@
                 <outlet property="available" destination="Bep-GA-T47" id="gbb-wG-TF0"/>
                 <outlet property="detailImage" destination="Wdi-da-U72" id="cPz-za-wzx"/>
                 <outlet property="editorial" destination="Gad-Sn-ddw" id="06V-2s-0rV"/>
+                <outlet property="rentButton" destination="mnA-x5-IAt" id="19e-Ni-kRc"/>
                 <outlet property="titleBook" destination="Ehs-ry-P3E" id="TDh-nk-7gh"/>
+                <outlet property="wishButton" destination="iSy-0p-stS" id="vwI-sX-rot"/>
                 <outlet property="year" destination="ojp-Q2-NTY" id="dZG-zi-UB6"/>
             </connections>
         </placeholder>
@@ -29,7 +31,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="94w-U2-Knq">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="312"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XGP-9i-nDd">
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGP-9i-nDd">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="168"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wdi-da-U72">
@@ -40,7 +42,7 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yEO-4h-fwv">
-                                            <rect key="frame" x="104" y="32" width="254" height="128"/>
+                                            <rect key="frame" x="96" y="32" width="262" height="128"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehs-ry-P3E">
                                                     <rect key="frame" x="16" y="8" width="36.5" height="23"/>
@@ -91,17 +93,6 @@
                                             <state key="normal" title="ADD TO WISHLIST">
                                                 <color key="titleColor" red="0.0" green="0.67843137254901964" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="8"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                    <integer key="value" value="1"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnA-x5-IAt">
                                             <rect key="frame" x="20" y="57" width="334" height="44"/>
@@ -138,7 +129,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kre-Ad-Gxe">
-                    <rect key="frame" x="20" y="389" width="374" height="481"/>
+                    <rect key="frame" x="20" y="376" width="374" height="494"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
@@ -147,7 +138,7 @@
             <constraints>
                 <constraint firstItem="b4K-rA-hes" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="35m-hK-jBS"/>
                 <constraint firstItem="b4K-rA-hes" firstAttribute="leading" secondItem="Kre-Ad-Gxe" secondAttribute="leading" id="4bS-A3-lKt"/>
-                <constraint firstItem="Kre-Ad-Gxe" firstAttribute="top" secondItem="b4K-rA-hes" secondAttribute="bottom" constant="23" id="4gz-4q-v5I"/>
+                <constraint firstItem="Kre-Ad-Gxe" firstAttribute="top" secondItem="b4K-rA-hes" secondAttribute="bottom" constant="10" id="4gz-4q-v5I"/>
                 <constraint firstItem="b4K-rA-hes" firstAttribute="trailing" secondItem="Kre-Ad-Gxe" secondAttribute="trailing" id="J5S-3i-zrH"/>
                 <constraint firstAttribute="bottom" secondItem="Kre-Ad-Gxe" secondAttribute="bottom" constant="26" id="Pdi-N6-kLD"/>
                 <constraint firstItem="b4K-rA-hes" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="X9t-ZW-IzC"/>

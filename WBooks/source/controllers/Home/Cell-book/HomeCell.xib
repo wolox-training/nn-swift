@@ -9,58 +9,74 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="135" id="KGk-i7-Jjw" customClass="HomeCell" customModule="WBooks" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="418" height="135"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="159" id="KGk-i7-Jjw" customClass="HomeCell" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="159"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="418" height="135"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="159"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rBA-Py-uC2">
-                        <rect key="frame" x="34" y="18" width="64" height="100"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM1-Xz-ouc">
+                        <rect key="frame" x="20" y="0.0" width="380" height="151"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rBA-Py-uC2">
+                                <rect key="frame" x="20" y="16" width="54.5" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="7AU-1L-B7T"/>
+                                    <constraint firstAttribute="width" secondItem="rBA-Py-uC2" secondAttribute="height" multiplier="16:25" id="XyM-8O-2jE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-Lg-lhm">
+                                <rect key="frame" x="89.5" y="20" width="270.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-Jf-SBL">
+                                <rect key="frame" x="89.5" y="49.5" width="252.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="7AU-1L-B7T"/>
-                            <constraint firstAttribute="width" secondItem="rBA-Py-uC2" secondAttribute="height" multiplier="16:25" id="XyM-8O-2jE"/>
+                            <constraint firstItem="Yvo-Jf-SBL" firstAttribute="leading" secondItem="rBA-Py-uC2" secondAttribute="trailing" constant="15" id="42N-At-o2Y"/>
+                            <constraint firstItem="Yvo-Jf-SBL" firstAttribute="trailing" secondItem="aM1-Xz-ouc" secondAttribute="trailingMargin" constant="-30" id="8Nu-UZ-7pc"/>
+                            <constraint firstAttribute="trailing" secondItem="RGM-Lg-lhm" secondAttribute="trailing" constant="20" id="F63-xd-6ij"/>
+                            <constraint firstItem="RGM-Lg-lhm" firstAttribute="top" secondItem="aM1-Xz-ouc" secondAttribute="top" constant="20" id="Jma-qG-RiH"/>
+                            <constraint firstItem="RGM-Lg-lhm" firstAttribute="leading" secondItem="rBA-Py-uC2" secondAttribute="trailing" constant="15" id="Qe2-hs-FHb"/>
+                            <constraint firstItem="rBA-Py-uC2" firstAttribute="leading" secondItem="aM1-Xz-ouc" secondAttribute="leading" constant="20" id="ZwO-is-xjq"/>
+                            <constraint firstItem="Yvo-Jf-SBL" firstAttribute="top" secondItem="RGM-Lg-lhm" secondAttribute="bottom" constant="8" id="aYx-fY-aDd"/>
+                            <constraint firstItem="rBA-Py-uC2" firstAttribute="top" secondItem="aM1-Xz-ouc" secondAttribute="top" constant="16" id="pPR-gy-Kkv"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-Lg-lhm">
-                        <rect key="frame" x="113" y="17" width="300" height="21.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
-                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-Jf-SBL">
-                        <rect key="frame" x="113" y="46.5" width="290" height="19.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
-                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="RGM-Lg-lhm" secondAttribute="trailing" constant="5" id="0V6-cB-bmH"/>
-                    <constraint firstAttribute="bottom" secondItem="rBA-Py-uC2" secondAttribute="bottom" constant="18" id="3eO-RT-IVN"/>
-                    <constraint firstItem="rBA-Py-uC2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="96P-gC-zAK"/>
-                    <constraint firstItem="Yvo-Jf-SBL" firstAttribute="leading" secondItem="rBA-Py-uC2" secondAttribute="trailing" constant="15" id="BfZ-6x-aZz"/>
-                    <constraint firstItem="RGM-Lg-lhm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="Co3-sJ-sXj"/>
-                    <constraint firstItem="rBA-Py-uC2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="34" id="IUJ-Mv-hyV"/>
-                    <constraint firstItem="RGM-Lg-lhm" firstAttribute="leading" secondItem="rBA-Py-uC2" secondAttribute="trailing" constant="15" id="Lud-WD-fpv"/>
-                    <constraint firstItem="Yvo-Jf-SBL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="5" id="l2t-VB-Poe"/>
-                    <constraint firstItem="Yvo-Jf-SBL" firstAttribute="top" secondItem="RGM-Lg-lhm" secondAttribute="bottom" constant="8" id="sna-H2-LMU"/>
+                    <constraint firstAttribute="trailing" secondItem="aM1-Xz-ouc" secondAttribute="trailing" constant="20" id="OES-59-ohq"/>
+                    <constraint firstItem="aM1-Xz-ouc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="amR-qC-BNY"/>
+                    <constraint firstAttribute="bottom" secondItem="aM1-Xz-ouc" secondAttribute="bottom" constant="8" id="awQ-ga-VVV"/>
+                    <constraint firstItem="aM1-Xz-ouc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="sNU-ma-lbW"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="borderView" destination="aM1-Xz-ouc" id="zI0-hz-ri3"/>
+                <outlet property="cellBackground" destination="H2p-sc-9uM" id="kKU-85-7Gn"/>
                 <outlet property="logoImage" destination="rBA-Py-uC2" id="jeA-WZ-xCO"/>
                 <outlet property="subLabel" destination="Yvo-Jf-SBL" id="XG9-Bl-VbZ"/>
                 <outlet property="titleLabel" destination="RGM-Lg-lhm" id="ohd-Cv-4tY"/>
             </connections>
-            <point key="canvasLocation" x="-107.24637681159422" y="63.950892857142854"/>
+            <point key="canvasLocation" x="-105.79710144927537" y="71.986607142857139"/>
         </tableViewCell>
     </objects>
 </document>

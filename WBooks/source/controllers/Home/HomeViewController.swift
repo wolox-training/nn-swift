@@ -9,14 +9,6 @@ import NotificationBannerSwift
 import SVProgressHUD
 import UIKit
 
-struct System {
-    static func clearNavigationBar(forBar navBar: UINavigationBar) {
-        navBar.setBackgroundImage(UIImage(), for: .default)
-        navBar.shadowImage = UIImage()
-        navBar.isTranslucent = true
-    }
-}
-
 final class HomeViewController: UIViewController {
     // MARK: - Public properties
     
@@ -64,8 +56,10 @@ final class HomeViewController: UIViewController {
         homeView.bookTable.delegate = self
         homeView.bookTable.separatorStyle = .none
         homeView.bookTable.showsVerticalScrollIndicator = false
-        homeView.bookTable.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9647058824, blue: 0.9803921569, alpha: 1)
+        //homeView.bookTable.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9647058824, blue: 0.9803921569, alpha: 1)
         homeView.bookTable.rowHeight = 120
+        homeView.bookTable.backgroundColor = .backgroundPolar()
+        homeView.bookTable.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         
         let nib = UINib(nibName: "HomeCell", bundle: nil)
         homeView.bookTable.register(nib, forCellReuseIdentifier: "HomeCell")
@@ -118,11 +112,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let detailBookViewController = DetailsBookViewController()
-        detailBookViewController.configureWith(books[indexPath.row])
+        
+        let valor = viewModel.getCellViewModel(at: indexPath)
+    
+        let vc = DetailsViewController(valor)
 
-        let vc = DetailsViewController()
-        //present( vc, animated: true)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
