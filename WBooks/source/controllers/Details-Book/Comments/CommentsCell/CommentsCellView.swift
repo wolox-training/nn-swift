@@ -14,9 +14,6 @@ class CommentsCellView: UITableViewCell {
     @IBOutlet weak var nameUser: UILabel!
     @IBOutlet weak var commentUser: UILabel!
 
-
-    var sections = [Category]()
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         userImage.layer.cornerRadius = userImage.frame.size.width/2
@@ -34,22 +31,14 @@ class CommentsCellView: UITableViewCell {
     func configureWith(_ comment: Comment,_ username: String,_ image: String) {
         commentUser.text = comment.content
         nameUser.text = username
-        userImage.kf.setImage(with: URL(string: (image)), completionHandler:  { [weak self] response in
-            switch response {
-            case .success:
-                self?.userImage.contentMode = .scaleAspectFill
-            case .failure:
-                print("error")
-            }
-        })
-    
-
-        
-        
-           
-        
-       
-
+        if let url = URL(string: image) {
+            let resource = ImageResource(downloadURL: url)
+            userImage.contentMode = .scaleAspectFill
+            userImage.kf.indicatorType = .activity
+            userImage.kf.setImage(with: resource)
+        } else {
+            userImage.image = UIImage(named: "img_user1.png")
+        }
     }
 }
 

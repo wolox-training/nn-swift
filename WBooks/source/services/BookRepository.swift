@@ -96,7 +96,6 @@ final class BookRepository: BookRepositoryType {
             .responseDecodable(of: [Comment].self) { response in
                 switch response.result {
                 case .success(let comment):
-                    print(comment, "comments")
                     onSuccess(comment)
                 case .failure(let error):
                     print(error)

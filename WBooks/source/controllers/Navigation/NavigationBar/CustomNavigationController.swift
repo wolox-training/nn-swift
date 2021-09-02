@@ -12,7 +12,7 @@ class CustomNavigationController: UINavigationController {
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
 
-        navBar()
+        woloxBookInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,7 +26,7 @@ class CustomNavigationController: UINavigationController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        navBar()
+        woloxBookInit()
    
     }
     
@@ -74,7 +74,7 @@ class CustomNavigationController: UINavigationController {
         
     }
     // MARK: - Private
-    private func bookInit() {
+    private func woloxBookInit() {
         navigationBar.isTranslucent = true
         navigationBar.tintColor = .white
         //navigationBar.barStyle = .default

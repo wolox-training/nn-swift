@@ -14,7 +14,6 @@ extension UITableViewCell {
     }
 }
 
-
 class HomeCell: UITableViewCell {
     
     @IBOutlet weak var logoImage: UIImageView!
@@ -34,7 +33,6 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var cellBackground: UIView!{
         didSet {
             cellBackground.backgroundColor = .backgroundPolar()
-
         }
     }
     
@@ -58,6 +56,5 @@ class HomeCell: UITableViewCell {
         } else {
             logoImage.image = UIImage(named: "img_book6.png")
         }
-        
     }
 }

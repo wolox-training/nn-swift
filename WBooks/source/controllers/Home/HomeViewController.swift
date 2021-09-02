@@ -35,6 +35,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
         configureTable()
         getBooks()
     }

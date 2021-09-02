@@ -10,7 +10,6 @@ import SVProgressHUD
 import Kingfisher
 import UIKit
 
-
 final class CommentsViewController: UIViewController {
     // MARK: - Public properties
     
@@ -21,7 +20,6 @@ final class CommentsViewController: UIViewController {
     var comments: [Comment] = []
     var users: [User] = []
    
-
     // MARK: - Initializers
     init(viewModel: CommentsViewModelProtocol = CommentsViewModel(),
          view: CommentsViewProtocol = CommentsView()) {
@@ -38,7 +36,6 @@ final class CommentsViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         configureTable()
     }
     
@@ -59,16 +56,13 @@ final class CommentsViewController: UIViewController {
         commentView.commentTable.delegate = self
         commentView.commentTable.separatorStyle = .none
         commentView.commentTable.showsVerticalScrollIndicator = false
-        //commentView.commentTable.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9647058824, blue: 0.9803921569, alpha: 1)
         commentView.commentTable.rowHeight = 120
         commentView.commentTable.backgroundColor = .backgroundPolar()
-    
         commentView.commentTable.isScrollEnabled = false
         
         let nib = UINib(nibName: "CommentsCellView", bundle: nil)
         commentView.commentTable.register(nib, forCellReuseIdentifier: "CommentsCellView")
     }
-
 }
 
 extension CommentsViewController {
@@ -76,12 +70,10 @@ extension CommentsViewController {
     func getBookComments(_ bookId: Int) {
         SVProgressHUD.show()
         viewModel.getBookComments(bookId, onError: errorComments(_:) , onSuccess: setComments(_:))
-
     }
     func setComments(_ comments: [Comment]) {
         SVProgressHUD.dismiss()
         self.comments = comments
-        print(self.comments, "self.commests")
         
         commentView.commentTable.reloadData()
         
@@ -95,20 +87,17 @@ extension CommentsViewController {
         NotificationBanner(title: "Error",
                            subtitle: message,
                            style: .warning).show()
-
     }
     
     func getUser(_ comments: Int) {
         SVProgressHUD.show()
         viewModel.getUserComment(comments, onError: errorUser(_:) , onSuccess: setUser(_:))
-
     }
+    
     func setUser(_ user: User) {
         SVProgressHUD.dismiss()
         self.users.append(user)
         viewModel.setUsuarios(user)
-       
-
         commentView.commentTable.reloadData()
     }
     
@@ -117,7 +106,6 @@ extension CommentsViewController {
         NotificationBanner(title: "Error",
                            subtitle: message,
                            style: .warning).show()
-
     }
 }
 
@@ -129,7 +117,7 @@ extension CommentsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsCellView", for: indexPath)
         
-       guard let commentCell = cell as? CommentsCellView,
+        guard let commentCell = cell as? CommentsCellView,
               comments.indices.contains(indexPath.row) else { return UITableViewCell()}
         guard let username = users.first(where: { $0.id == comments[indexPath.row].user_id })?.username else { return UITableViewCell() }
         guard let image = users.first(where: { $0.id == comments[indexPath.row].user_id })?.image else { return UITableViewCell() }
