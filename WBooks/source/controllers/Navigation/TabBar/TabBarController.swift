@@ -20,13 +20,13 @@ class TabBarController: UITabBarController {
         home.tabBarItem.image = UIImage(named: "ic_library active.png")
         home.tabBarItem.tag = 0
         
-        let wishList = CustomNavigationController(rootViewController: WishListController())
-        wishList.tabBarItem = UITabBarItem()
-        wishList.tabBarItem.title = title
-        wishList.tabBarItem.image = UIImage(named: "ic_wishlist active.png")
-        wishList.tabBarItem.tag = 1
+        let newBook = CustomNavigationController(rootViewController: NewBookViewController())
+        newBook.tabBarItem = UITabBarItem()
+        newBook.tabBarItem.title = title
+        newBook.tabBarItem.image = UIImage(named: "ic_wishlist active.png")
+        newBook.tabBarItem.tag = 1
 
-        viewControllers = [home, wishList]
+        viewControllers = [home, newBook]
         
         guard let items = tabBar.items else { return }
         

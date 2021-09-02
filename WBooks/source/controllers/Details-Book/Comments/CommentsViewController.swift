@@ -7,7 +7,9 @@
 
 import NotificationBannerSwift
 import SVProgressHUD
+import Kingfisher
 import UIKit
+
 
 final class CommentsViewController: UIViewController {
     // MARK: - Public properties
@@ -18,6 +20,7 @@ final class CommentsViewController: UIViewController {
     
     var comments: [Comment] = []
     var users: [User] = []
+   
 
     // MARK: - Initializers
     init(viewModel: CommentsViewModelProtocol = CommentsViewModel(),
@@ -35,6 +38,7 @@ final class CommentsViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         configureTable()
     }
     
@@ -77,6 +81,7 @@ extension CommentsViewController {
     func setComments(_ comments: [Comment]) {
         SVProgressHUD.dismiss()
         self.comments = comments
+        print(self.comments, "self.commests")
         
         commentView.commentTable.reloadData()
         
@@ -102,8 +107,8 @@ extension CommentsViewController {
         SVProgressHUD.dismiss()
         self.users.append(user)
         viewModel.setUsuarios(user)
-        print(self.users, "self.users")
-        
+       
+
         commentView.commentTable.reloadData()
     }
     
@@ -120,19 +125,21 @@ extension CommentsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsCellView", for: indexPath)
         
-        guard let commentCell = cell as? CommentsCellView,
-              comments.indices.contains(indexPath.row) else {
-            return UITableViewCell()
-        }
-        commentCell.configureWith(comments[indexPath.row],self.users)
+       guard let commentCell = cell as? CommentsCellView,
+              comments.indices.contains(indexPath.row) else { return UITableViewCell()}
+        guard let username = users.first(where: { $0.id == comments[indexPath.row].user_id })?.username else { return UITableViewCell() }
+        guard let image = users.first(where: { $0.id == comments[indexPath.row].user_id })?.image else { return UITableViewCell() }
+        
+        commentCell.configureWith(self.comments[indexPath.row],username,image)
+        
         return commentCell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return users.count
     }
     
 }

@@ -7,20 +7,12 @@
 
 import UIKit
 
-
-struct System {
-    static func clearNavigationBar(forBar navBar: UINavigationBar) {
-        navBar.setBackgroundImage(UIImage(), for: .default)
-        navBar.shadowImage = UIImage()
-        navBar.isTranslucent = true
-    }
-}
-
 class CustomNavigationController: UINavigationController {
 
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
-        woloxBookInit()
+
+        navBar()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,9 +26,34 @@ class CustomNavigationController: UINavigationController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        woloxBookInit()
+        navBar()
    
     }
+    
+    private func navBar(){
+        
+        let image = UIImage(named: "bc_nav bar")
+    
+        navigationBar.isTranslucent = true
+        navigationBar.barStyle = .default
+        let logoImageView = UIImageView(image: image)
+        view.insertSubview(logoImageView, belowSubview: navigationBar)
+        logoImageView.contentMode = .scaleAspectFill
+        logoImageView.clipsToBounds = true
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        let height: CGFloat = UIScreen.main.bounds.width * (image!.size.height) / (image!.size.width)
+        NSLayoutConstraint.activate([
+            logoImageView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            logoImageView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            logoImageView.topAnchor.constraint(equalTo: view.topAnchor),
+            logoImageView.heightAnchor.constraint(equalToConstant: height)
+        ])
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
+        
+    }
+    
     private func configureNavBar() {
         
         navigationBar.isTranslucent = true
@@ -45,6 +62,8 @@ class CustomNavigationController: UINavigationController {
         //navigationBar.setBackgroundImage(img, for: .default)
         //navigationBar.shadowImage = UIImage()
         //navigationBar.layoutIfNeeded()
+        
+        
         
         navigationBar.shadowImage = UIImage()
         navigationBar.tintColor = .white
@@ -55,7 +74,7 @@ class CustomNavigationController: UINavigationController {
         
     }
     // MARK: - Private
-    private func woloxBookInit() {
+    private func bookInit() {
         navigationBar.isTranslucent = true
         navigationBar.tintColor = .white
         //navigationBar.barStyle = .default

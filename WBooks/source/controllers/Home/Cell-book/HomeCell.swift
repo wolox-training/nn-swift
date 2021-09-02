@@ -49,13 +49,15 @@ class HomeCell: UITableViewCell {
     func configureWith(_ book: Book) {
         titleLabel.text = book.title
         subLabel.text = book.genre
-        logoImage.kf.setImage(with: URL(string: book.image), completionHandler:  { [weak self] response in
-            switch response {
-            case .success:
-                self?.logoImage.contentMode = .scaleAspectFill
-            case .failure:
-                print("error")
-            }
-        })
+        
+        if let url = URL(string: book.image) {
+            let resource = ImageResource(downloadURL: url)
+            self.logoImage.contentMode = .scaleAspectFill
+            logoImage.kf.indicatorType = .activity
+            logoImage.kf.setImage(with: resource)
+        } else {
+            logoImage.image = UIImage(named: "img_book6.png")
+        }
+        
     }
 }

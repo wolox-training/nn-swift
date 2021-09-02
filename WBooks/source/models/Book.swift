@@ -26,40 +26,15 @@ enum BookKey: String, CodingKey {
 }
 
 
-struct BookViewModel {
-    
+public struct BookViewModel: Codable {
+    let id: Int
     let book: Book
-    
-    init(book: Book) {
-        self.book = book
-    }
-    
-    var bookId: String {
-        return String(book.id)
-    }
-    
-    var bookTitle: String {
-        return book.title
-    }
-    
-    var bookAuthor: String {
-        return book.author
-    }
-    
-    var bookGenre: String {
-        return book.genre
-    }
-    
-    var bookYear: String {
-        return book.year
-    }
-    
-    var bookImage: String {
-        return book.image
-    }
-    
-    var wished: Bool = false
-    var rented: Bool = false
-    
+    let user: User
+}
+
+enum BookViewModelKey: String, CodingKey {
+    case id = "id"
+    case book = "book"
+    case user = "user"
 }
 
