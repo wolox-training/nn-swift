@@ -131,7 +131,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kre-Ad-Gxe">
-                    <rect key="frame" x="32" y="360" width="350" height="522"/>
+                    <rect key="frame" x="32" y="350" width="350" height="532"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
@@ -140,7 +140,7 @@
             <constraints>
                 <constraint firstItem="b4K-rA-hes" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="12" id="35m-hK-jBS"/>
                 <constraint firstItem="b4K-rA-hes" firstAttribute="leading" secondItem="Kre-Ad-Gxe" secondAttribute="leading" id="4bS-A3-lKt"/>
-                <constraint firstItem="Kre-Ad-Gxe" firstAttribute="top" secondItem="b4K-rA-hes" secondAttribute="bottom" constant="18" id="4gz-4q-v5I"/>
+                <constraint firstItem="Kre-Ad-Gxe" firstAttribute="top" secondItem="b4K-rA-hes" secondAttribute="bottom" constant="8" id="4gz-4q-v5I"/>
                 <constraint firstItem="b4K-rA-hes" firstAttribute="trailing" secondItem="Kre-Ad-Gxe" secondAttribute="trailing" id="J5S-3i-zrH"/>
                 <constraint firstAttribute="bottom" secondItem="Kre-Ad-Gxe" secondAttribute="bottom" constant="14" id="Pdi-N6-kLD"/>
                 <constraint firstItem="b4K-rA-hes" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" constant="-12" id="X9t-ZW-IzC"/>
