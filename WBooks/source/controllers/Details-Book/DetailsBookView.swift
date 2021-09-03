@@ -15,6 +15,9 @@ extension UIColor {
     static func backgroundPolar() -> UIColor {
         return UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
     }
+    static func backgroundNav() -> UIColor {
+        return UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
+    }
 }
 
 
@@ -41,6 +44,7 @@ class DetailsBookView: NibView {
             rentButton.layer.cornerRadius = 20
             rentButton.layer.borderWidth = 1
             rentButton.clipsToBounds = true
+            rentButton.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         }
     }
     @IBOutlet weak var wishButton: UIButton! {

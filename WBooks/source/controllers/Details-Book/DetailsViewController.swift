@@ -23,7 +23,7 @@ class DetailsViewController: ScrollStackViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func addChildrenViewControllers(){
         let details = DetailsBookViewController()
         details.configureWith(bookViewModel)

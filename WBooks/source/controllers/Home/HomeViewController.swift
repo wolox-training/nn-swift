@@ -10,13 +10,11 @@ import SVProgressHUD
 import UIKit
 
 final class HomeViewController: UIViewController {
-    // MARK: - Public properties
     
     // MARK: - Private properties
     private let viewModel: HomeViewModelProtocol
     private let homeView: HomeViewProtocol
-    //private var tableDataSource = BookDataSource()
-    
+     
     var books: [Book] = []
     
     // MARK: - Initializers
@@ -24,7 +22,6 @@ final class HomeViewController: UIViewController {
          view: HomeViewProtocol = HomeView()) {
         self.viewModel = viewModel
         homeView = view
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,7 +32,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         configureTable()
         getBooks()
     }
@@ -57,7 +54,6 @@ final class HomeViewController: UIViewController {
         homeView.bookTable.delegate = self
         homeView.bookTable.separatorStyle = .none
         homeView.bookTable.showsVerticalScrollIndicator = false
-        //homeView.bookTable.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9647058824, blue: 0.9803921569, alpha: 1)
         homeView.bookTable.rowHeight = 120
         homeView.bookTable.backgroundColor = .backgroundPolar()
         homeView.bookTable.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
@@ -65,7 +61,6 @@ final class HomeViewController: UIViewController {
         let nib = UINib(nibName: "HomeCell", bundle: nil)
         homeView.bookTable.register(nib, forCellReuseIdentifier: "HomeCell")
     }
-
 }
 
 private extension HomeViewController {
@@ -79,13 +74,11 @@ private extension HomeViewController {
         self.books = books
         homeView.bookTable.reloadData()
     }
-    
     func errorBooks(_ message: String) {
         SVProgressHUD.dismiss()
         NotificationBanner(title: "Error",
                            subtitle: message,
                            style: .warning).show()
-
     }
 }
 
@@ -110,14 +103,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let valor = viewModel.getCellViewModel(at: indexPath)
-    
         let vc = DetailsViewController(valor)
-
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -23,14 +23,8 @@ struct ErrorResponse: Codable {
     let error: String
 }
 
-struct BookRequest: Codable {
-    let text: String
-    let imageUrl: String?
-    let videoUrl: String?
-}
-
 protocol BookRepositoryType {
-    func saveBook(_ body: BookRequest,
+    func addBook(_ book: Book,
                   onError: @escaping (Error) -> Void,
                   onSuccess: @escaping (Book) -> Void)
     
@@ -44,19 +38,22 @@ protocol BookRepositoryType {
 }
 
 final class BookRepository: BookRepositoryType {
-    func saveBook(_ body: BookRequest,
-                  onError: @escaping (Error) -> Void,
-                  onSuccess: @escaping (Book) -> Void) {
-        
-        AF.request(Endpoint.books, method: .post, parameters: body,
+    
+    func addBook(_ book: Book, onError: @escaping (Error) -> Void, onSuccess: @escaping (Book) -> Void) {
+        let endpoint = URL(string: Endpoint.books)!
+        var request = URLRequest(url: endpoint)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+            
+        AF.request(endpoint, method: .post, parameters: book,
                    encoder: JSONParameterEncoder.default, headers: nil)
             .validate()
             .responseDecodable(of: Book.self) { response in
                 switch response.result {
-                case .success(let post):
-                    onSuccess(post)
+                case .success(let book):
+                    onSuccess(book)
                 case .failure(let error):
-                    onError(error)
+                    onError(error.localizedDescription as! Error)
                 }
             }
     }

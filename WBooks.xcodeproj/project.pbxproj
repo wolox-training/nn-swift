@@ -41,7 +41,6 @@
 		99732D8126B478FB00FB9033 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D8026B478FB00FB9033 /* WBooksUITests.swift */; };
 		999B56C826DC61E100CC9263 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B56C726DC61E100CC9263 /* User.swift */; };
 		999D9B3B26C0DBB7001A154B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D9B3A26C0DBB7001A154B /* HomeViewController.swift */; };
-		99BC02E226D6936900688075 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BC02E126D6936900688075 /* Kingfisher.framework */; };
 		99DB3EEF26C7012B007B4EC9 /* CommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */; };
 		99DB3EF026C7012B007B4EC9 /* CommentsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DB3EEE26C7012B007B4EC9 /* CommentsCellView.xib */; };
 		99DB3EF426CB78C2007B4EC9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EF326CB78C2007B4EC9 /* TabBarController.swift */; };
@@ -147,7 +146,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99BC02E226D6936900688075 /* Kingfisher.framework in Frameworks */,
 				9960977F26D03C17003D4977 /* NotificationBannerSwift.framework in Frameworks */,
 				9960976F26D026F1003D4977 /* SVProgressHUD.framework in Frameworks */,
 				9960976526CEEF50003D4977 /* Alamofire.framework in Frameworks */,
@@ -345,7 +343,6 @@
 		999D9B3C26C17C30001A154B /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				999D9B4326C17E29001A154B /* storyboards */,
 				99732D6726B478FB00FB9033 /* Assets.xcassets */,
 			);
 			path = resource;
@@ -404,21 +401,6 @@
 				999B56C726DC61E100CC9263 /* User.swift */,
 			);
 			path = models;
-			sourceTree = "<group>";
-		};
-		999D9B4326C17E29001A154B /* storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				999D9B4426C17FFD001A154B /* List-Books */,
-			);
-			path = storyboards;
-			sourceTree = "<group>";
-		};
-		999D9B4426C17FFD001A154B /* List-Books */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "List-Books";
 			sourceTree = "<group>";
 		};
 		99DB3EF226CB784F007B4EC9 /* TabBar */ = {

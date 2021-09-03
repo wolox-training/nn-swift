@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct User: Codable {
     let id: Int
@@ -21,3 +22,5 @@ enum UserKey: String, CodingKey {
     case password = "password"
     case image = "image"
 }
+
+

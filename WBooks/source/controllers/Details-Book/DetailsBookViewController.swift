@@ -25,6 +25,12 @@ class DetailsBookViewController: WBooksViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        print("\n Debugger : View did disapper called")
+
+         self.navigationController?.isNavigationBarHidden =  true
+    }
+    
     override func loadView() {
         super.loadView()
         view = detailsView

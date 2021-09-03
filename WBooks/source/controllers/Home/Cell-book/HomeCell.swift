@@ -27,6 +27,7 @@ class HomeCell: UITableViewCell {
             borderView.layer.cornerRadius = 20
             borderView.layer.borderWidth = 1
             borderView.clipsToBounds = true
+            borderView.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         }
     }
     
