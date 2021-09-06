@@ -24,9 +24,8 @@ struct ErrorResponse: Codable {
 }
 
 protocol BookRepositoryType {
-    func addBook(_ book: Book,
-                  onError: @escaping (Error) -> Void,
-                  onSuccess: @escaping (Book) -> Void)
+    
+    func addBook(book: BookRequest, onSuccess: @escaping (BookRequest) -> Void, onError: @escaping (String) -> Void)
     
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void)
     
@@ -39,24 +38,24 @@ protocol BookRepositoryType {
 
 final class BookRepository: BookRepositoryType {
     
-    func addBook(_ book: Book, onError: @escaping (Error) -> Void, onSuccess: @escaping (Book) -> Void) {
+     func addBook(book: BookRequest, onSuccess: @escaping (BookRequest) -> Void, onError: @escaping (String) -> Void) {
+
         let endpoint = URL(string: Endpoint.books)!
         var request = URLRequest(url: endpoint)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-            
-        AF.request(endpoint, method: .post, parameters: book,
-                   encoder: JSONParameterEncoder.default, headers: nil)
-            .validate()
-            .responseDecodable(of: Book.self) { response in
-                switch response.result {
-                case .success(let book):
-                    onSuccess(book)
-                case .failure(let error):
-                    onError(error.localizedDescription as! Error)
-                }
-            }
-    }
+
+           AF.request(endpoint, method: .post, parameters: book, encoder: JSONParameterEncoder.default)
+               .responseDecodable(of: BookRequest.self) { response in
+               switch response.result {
+                   case .success(let bookRequest):
+                    print("book nuevo", bookRequest)
+                       onSuccess(bookRequest)
+                   case .failure(let error):
+                    onError(error.localizedDescription)
+                   }
+           }
+       }
     
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void) {
         

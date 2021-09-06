@@ -8,7 +8,7 @@
 import UIKit
 
 protocol NewBookViewModelProtocol {
-    func addBook (_ book: Book, onCompletion: @escaping (Result<Book, Error>) -> Void)
+    func addBook(book: BookRequest, onSuccess: @escaping (BookRequest) -> Void, onError: @escaping (String) -> Void)
 }
 
 final class NewBookViewModel: NewBookViewModelProtocol {
@@ -17,15 +17,13 @@ final class NewBookViewModel: NewBookViewModelProtocol {
     init(repository: BookRepositoryType = BookRepository()) {
         self.repository = repository
     }
-    
-    func addBook (_ book: Book, onCompletion: @escaping (Result<Book, Error>) -> Void) {
-        repository.addBook(book) { error in
-            onCompletion(.failure(error))
-        } onSuccess: { book in
-            onCompletion(.success(book))
+ 
+    func addBook(book: BookRequest, onSuccess: @escaping (BookRequest) -> Void, onError: @escaping (String) -> Void) {
+        repository.addBook(book: book) { bookRequest in
+            onSuccess(bookRequest)
+        } onError: { errorMessage in
+            onError(errorMessage)
         }
+
     }
-    
-
 }
-

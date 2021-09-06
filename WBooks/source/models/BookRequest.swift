@@ -1,27 +1,26 @@
 //
-//  BookModel.swift
+//  BookRequest.swift
 //  WBooks
 //
-//  Created by noelia.nieres on 10/08/2021.
+//  Created by noelia.nieres on 05/09/2021.
 //
 
 import Foundation
 
-public struct Book: Codable {
-    let id: Int
+public struct BookRequest: Codable {
     let title: String
     let author: String
     let genre: String
     let year: String
     let image: String
+    let status: String
 }
 
-enum BookKey: String, CodingKey {
-    case id = "id"
+enum BookRequestKey: String, CodingKey {
     case title = "title"
     case author = "author"
     case genre = "genre"
     case year = "year"
     case image = "image"
+    case status = "status"
 }
-

@@ -44,6 +44,7 @@
 		99DB3EEF26C7012B007B4EC9 /* CommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */; };
 		99DB3EF026C7012B007B4EC9 /* CommentsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99DB3EEE26C7012B007B4EC9 /* CommentsCellView.xib */; };
 		99DB3EF426CB78C2007B4EC9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EF326CB78C2007B4EC9 /* TabBarController.swift */; };
+		99DC1C7226E5A1DF008A0916 /* BookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC1C7126E5A1DF008A0916 /* BookRequest.swift */; };
 		99E6143B26DD8938004011D5 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6143A26DD8938004011D5 /* CustomNavigationController.swift */; };
 		99E6143F26DDCD97004011D5 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6143D26DDCD97004011D5 /* NewBookView.swift */; };
 		99E6144026DDCD97004011D5 /* NewBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E6143E26DDCD97004011D5 /* NewBookView.xib */; };
@@ -127,6 +128,7 @@
 		99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCellView.swift; sourceTree = "<group>"; };
 		99DB3EEE26C7012B007B4EC9 /* CommentsCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsCellView.xib; sourceTree = "<group>"; };
 		99DB3EF326CB78C2007B4EC9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		99DC1C7126E5A1DF008A0916 /* BookRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRequest.swift; sourceTree = "<group>"; };
 		99E6143A26DD8938004011D5 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		99E6143D26DDCD97004011D5 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
 		99E6143E26DDCD97004011D5 /* NewBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBookView.xib; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				9906394726C2514800E3609D /* Book.swift */,
 				99304B0D26D97DF60059399E /* Comment.swift */,
 				999B56C726DC61E100CC9263 /* User.swift */,
+				99DC1C7126E5A1DF008A0916 /* BookRequest.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				9960975826CD5DF3003D4977 /* DetailsViewController.swift in Sources */,
 				9960977426D02BEA003D4977 /* HomeView.swift in Sources */,
 				9906394826C2514800E3609D /* Book.swift in Sources */,
+				99DC1C7226E5A1DF008A0916 /* BookRequest.swift in Sources */,
 				9960975926CD5E4C003D4977 /* ScrollStackViewController.swift in Sources */,
 				99E6144526E002B7004011D5 /* NewBookViewModel.swift in Sources */,
 				9960976026CE1A34003D4977 /* CommentsViewModel.swift in Sources */,

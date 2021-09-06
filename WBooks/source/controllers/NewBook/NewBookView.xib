@@ -14,6 +14,7 @@
                 <outlet property="backgroundView" destination="iN0-l3-epB" id="hTe-Th-AYZ"/>
                 <outlet property="borderView" destination="gvv-3o-Rtl" id="vPE-2g-Qb1"/>
                 <outlet property="descriptionBook" destination="XBu-37-7xV" id="Saq-ha-B6g"/>
+                <outlet property="nameBook" destination="1fC-4o-v7b" id="5gD-fe-cAf"/>
                 <outlet property="submitButton" destination="NpV-Dn-WIH" id="CuN-91-CgM"/>
                 <outlet property="topicBook" destination="Y3H-TF-xlm" id="7Ep-iK-KTa"/>
                 <outlet property="yearBook" destination="fCm-sq-LWD" id="TWl-ge-DMR"/>
@@ -31,38 +32,38 @@
                             <rect key="frame" x="20" y="20" width="231" height="493"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUi-JS-wAM" userLabel="Add Image">
-                                    <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="89" height="95"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="89" id="inL-fm-Kmy"/>
-                                        <constraint firstAttribute="height" constant="89" id="o2S-EM-eAu"/>
+                                        <constraint firstAttribute="height" constant="95" id="o2S-EM-eAu"/>
                                     </constraints>
-                                    <state key="normal" image="ic_add new"/>
+                                    <state key="normal" image="ic_add new" backgroundImage="ic_add photo"/>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-Pq-c4p">
-                                    <rect key="frame" x="0.0" y="141" width="231" height="256"/>
+                                    <rect key="frame" x="0.0" y="147" width="231" height="250"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fC-4o-v7b" userLabel="Book Name">
-                                            <rect key="frame" x="0.0" y="0.0" width="231" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="231" height="43"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FrS-ka-7ht" userLabel="Book Author">
-                                            <rect key="frame" x="0.0" y="53" width="231" height="44"/>
+                                            <rect key="frame" x="0.0" y="52" width="231" height="42.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCm-sq-LWD" userLabel="Book Year">
-                                            <rect key="frame" x="0.0" y="106" width="231" height="44"/>
+                                            <rect key="frame" x="0.0" y="103.5" width="231" height="43"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3H-TF-xlm" userLabel="Book Genre">
-                                            <rect key="frame" x="0.0" y="159" width="231" height="44"/>
+                                            <rect key="frame" x="0.0" y="155.5" width="231" height="42.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBu-37-7xV" userLabel="Book Description">
-                                            <rect key="frame" x="0.0" y="212" width="231" height="44"/>
+                                            <rect key="frame" x="0.0" y="207" width="231" height="43"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -107,6 +108,7 @@
     </objects>
     <resources>
         <image name="ic_add new" width="50" height="50"/>
+        <image name="ic_add photo" width="96" height="96"/>
         <image name="img_main button.png" width="275" height="44"/>
     </resources>
 </document>
