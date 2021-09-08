@@ -1,5 +1,4 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '12.0'
 
 target 'WBooks' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,7 +6,10 @@ target 'WBooks' do
 
   # Pods for WBooks
   pod 'Alamofire', '~> 5.2'
-
+  pod 'NotificationBannerSwift', '~> 3.0.0'
+  pod 'SVProgressHUD'
+  pod 'Kingfisher', '~> 5.0'
+  
   target 'WBooksTests' do
     inherit! :search_paths
     # Pods for testing
