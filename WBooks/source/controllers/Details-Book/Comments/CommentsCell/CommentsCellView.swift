@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 13/08/2021.
 //
-
 import UIKit
 import Kingfisher
 
@@ -21,7 +20,6 @@ class CommentsCellView: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,4 +39,3 @@ class CommentsCellView: UITableViewCell {
         }
     }
 }
-

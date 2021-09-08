@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 27/08/2021.
 //
-
 import Foundation
 
 public struct Comment: Codable {
@@ -20,7 +19,3 @@ enum CommentKey: String, CodingKey {
     case book_id = "book_id"
     case user_id = "user_id"
 }
-
-
-
-

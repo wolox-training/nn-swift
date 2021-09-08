@@ -20,15 +20,9 @@ class DetailsBookViewController: WBooksViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        print("\n Debugger : View did disapper called")
 
-         self.navigationController?.isNavigationBarHidden =  true
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden =  true
     }
     
     override func loadView() {

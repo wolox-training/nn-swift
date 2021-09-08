@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 07/09/2021.
 //
-
 import Foundation
 import UIKit
 
@@ -20,10 +19,8 @@ class BookSuggestionsView: NibView{
             backgroundView.backgroundColor = .backgroundPolar()
         }
     }
-    
 }
 
 extension BookSuggestionsView: BookSuggestionsViewProtocol {
     var collectionBooks: UICollectionView { collectionBook }
-    
 }

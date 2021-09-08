@@ -39,6 +39,7 @@
 		99732D6B26B478FB00FB9033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99732D6926B478FB00FB9033 /* LaunchScreen.storyboard */; };
 		99732D7626B478FB00FB9033 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D7526B478FB00FB9033 /* WBooksTests.swift */; };
 		99732D8126B478FB00FB9033 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D8026B478FB00FB9033 /* WBooksUITests.swift */; };
+		9994981326E93F1800133A9D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994981226E93F1800133A9D /* ColorExtension.swift */; };
 		999B56C826DC61E100CC9263 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B56C726DC61E100CC9263 /* User.swift */; };
 		999D9B3B26C0DBB7001A154B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D9B3A26C0DBB7001A154B /* HomeViewController.swift */; };
 		99DB3EEF26C7012B007B4EC9 /* CommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */; };
@@ -133,6 +134,7 @@
 		99732D7C26B478FB00FB9033 /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99732D8026B478FB00FB9033 /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		99732D8226B478FB00FB9033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9994981226E93F1800133A9D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		999B56C726DC61E100CC9263 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		999D9B3A26C0DBB7001A154B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		99BC02E126D6936900688075 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 			children = (
 				9960975C26CD626E003D4977 /* NibView.swift */,
 				9960974B26CD5422003D4977 /* ScrollStackViewController.swift */,
+				9994981226E93F1800133A9D /* ColorExtension.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				99DC1C7926E7E3FF008A0916 /* BookSuggestionsView.swift in Sources */,
 				99E6144526E002B7004011D5 /* NewBookViewModel.swift in Sources */,
 				99DC1C8926E7EFAA008A0916 /* BookSuggestionCell.swift in Sources */,
+				9994981326E93F1800133A9D /* ColorExtension.swift in Sources */,
 				9960976026CE1A34003D4977 /* CommentsViewModel.swift in Sources */,
 				9960976326CEC341003D4977 /* BookRepository.swift in Sources */,
 				999B56C826DC61E100CC9263 /* User.swift in Sources */,

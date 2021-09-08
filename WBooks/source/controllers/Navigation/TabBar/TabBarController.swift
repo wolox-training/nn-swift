@@ -40,7 +40,6 @@ class TabBarController: UITabBarController {
             item.imageInsets = UIEdgeInsets(top: 4, left: 0,bottom: -4, right: 0)
         }
     }
-
 }
 
 class WishListController: UIViewController {
@@ -50,4 +49,3 @@ class WishListController: UIViewController {
         view.backgroundColor = .red
     }
 }
-

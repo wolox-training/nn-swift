@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 05/09/2021.
 //
-
 import Foundation
 
 public struct BookRequest: Codable {

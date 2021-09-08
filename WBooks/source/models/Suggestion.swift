@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 08/09/2021.
 //
-
 import Foundation
 
 public struct Suggestion: Codable {
@@ -22,5 +21,3 @@ enum SuggestionKey: String, CodingKey {
     case title = "title"
     case author = "author"
 }
-
-

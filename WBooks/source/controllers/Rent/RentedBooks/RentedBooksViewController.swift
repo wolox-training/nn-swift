@@ -62,7 +62,6 @@ final class RentedBooksViewController: UIViewController {
         homeView.bookTable.rowHeight = 120
         homeView.bookTable.backgroundColor = .backgroundPolar()
         homeView.bookTable.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
-        
         let nib = UINib(nibName: "HomeCell", bundle: nil)
         homeView.bookTable.register(nib, forCellReuseIdentifier: "HomeCell")
     }
@@ -75,11 +74,13 @@ private extension RentedBooksViewController {
         SVProgressHUD.show()
         viewModel.getBookRent(onError: errorRents(_:), onSuccess: setRents(_:))
     }
+    
     func setRents(_ rents: [Rent]) {
         SVProgressHUD.dismiss()
         self.rents = rents
         homeView.bookTable.reloadData()
     }
+    
     func errorRents(_ message: String) {
         SVProgressHUD.dismiss()
         NotificationBanner(title: "Error",
@@ -91,11 +92,13 @@ private extension RentedBooksViewController {
         SVProgressHUD.show()
         homeViewModel.getBooks(onError: errorBooks(_:), onSuccess: setBooks(_:))
     }
+    
     func setBooks(_ books: [Book]) {
         SVProgressHUD.dismiss()
         self.books = books
         homeView.bookTable.reloadData()
     }
+    
     func errorBooks(_ message: String) {
         SVProgressHUD.dismiss()
         NotificationBanner(title: "Error",
@@ -123,6 +126,4 @@ extension RentedBooksViewController: UITableViewDataSource, UITableViewDelegate 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-        
 }
-

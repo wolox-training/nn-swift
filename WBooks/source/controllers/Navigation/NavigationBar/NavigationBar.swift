@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 11/08/2021.
 //
-
 import Foundation
 import UIKit
 
@@ -31,7 +30,6 @@ final class NavigationBar: UIView {
             return leftButton.isHidden
         }
     }
-    
     
     override func awakeFromNib() {
         initWithNib()

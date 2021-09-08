@@ -4,15 +4,13 @@
 //
 //  Created by noelia.nieres on 18/08/2021.
 //
-
 import NotificationBannerSwift
 import SVProgressHUD
 import Kingfisher
 import UIKit
 
 final class CommentsViewController: UIViewController {
-    // MARK: - Public properties
-    
+
     // MARK: - Private properties
     private let viewModel: CommentsViewModelProtocol
     private let commentView: CommentsViewProtocol
@@ -25,7 +23,6 @@ final class CommentsViewController: UIViewController {
          view: CommentsViewProtocol = CommentsView()) {
         self.viewModel = viewModel
         commentView = view
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -59,7 +56,6 @@ final class CommentsViewController: UIViewController {
         commentView.commentTable.rowHeight = 120
         commentView.commentTable.backgroundColor = .backgroundPolar()
         commentView.commentTable.isScrollEnabled = false
-        
         let nib = UINib(nibName: "CommentsCellView", bundle: nil)
         commentView.commentTable.register(nib, forCellReuseIdentifier: "CommentsCellView")
     }
@@ -71,10 +67,10 @@ extension CommentsViewController {
         SVProgressHUD.show()
         viewModel.getBookComments(bookId, onError: errorComments(_:) , onSuccess: setComments(_:))
     }
+    
     func setComments(_ comments: [Comment]) {
         SVProgressHUD.dismiss()
         self.comments = comments
-        
         commentView.commentTable.reloadData()
         
         for item in self.comments {
@@ -97,7 +93,7 @@ extension CommentsViewController {
     func setUser(_ user: User) {
         SVProgressHUD.dismiss()
         self.users.append(user)
-        viewModel.setUsuarios(user)
+        viewModel.setUsers(user)
         commentView.commentTable.reloadData()
     }
     
@@ -126,8 +122,8 @@ extension CommentsViewController: UITableViewDataSource, UITableViewDelegate {
         
         return commentCell
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return users.count
-    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+       return users.count
+    }
 }

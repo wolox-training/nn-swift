@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 20/08/2021.
 //
-
 import Foundation
 
 protocol HomeViewModelProtocol {
@@ -43,6 +42,7 @@ final class HomeViewModel: HomeViewModelProtocol {
         repository.getBooks { errorMessage in
             onError(errorMessage)
         } onSuccess: { books in
+            self.books = books
             onSuccess(books)
         }
     }

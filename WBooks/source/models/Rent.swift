@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 07/09/2021.
 //
-
 import Foundation
 
 public struct Rent: Codable {

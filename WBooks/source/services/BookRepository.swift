@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 19/08/2021.
 //
-
 import Foundation
 import Alamofire
 
@@ -54,7 +53,7 @@ final class BookRepository: BookRepositoryType {
                     onError(error.localizedDescription)
                    }
            }
-       }
+     }
     
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void) {
         
@@ -75,7 +74,6 @@ final class BookRepository: BookRepositoryType {
             }
     }
     
-
     func getBookComments(_ bookId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void) {
     
         let ruta = Endpoint.books + "/\(bookId )/comments"
@@ -189,4 +187,3 @@ final class BookRepository: BookRepositoryType {
             }
     }
 }
-

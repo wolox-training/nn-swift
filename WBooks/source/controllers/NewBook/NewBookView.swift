@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 30/08/2021.
 //
-
 import UIKit
 
 enum NewButtons {
@@ -88,8 +87,8 @@ extension NewBookView: NewBookViewProtocol {
             addImage.addTarget(vc, action: action, for: .touchUpInside)
        }
     }
+    
     func setImage(_ valor: UIImage) {
         addImage.setBackgroundImage(valor, for: .normal)
     }
-    
 }

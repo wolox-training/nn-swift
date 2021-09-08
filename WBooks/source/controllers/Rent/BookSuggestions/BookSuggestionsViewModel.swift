@@ -4,11 +4,10 @@
 //
 //  Created by noelia.nieres on 07/09/2021.
 //
-
 import UIKit
 
 protocol BookSuggestionsViewModelProtocol {
-
+    
     func getSuggestions(onError: @escaping (String) -> Void, onSuccess: @escaping ([Suggestion]) -> Void)
 }
 

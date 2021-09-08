@@ -24,4 +24,3 @@ enum BookKey: String, CodingKey {
     case year = "year"
     case image = "image"
 }
-

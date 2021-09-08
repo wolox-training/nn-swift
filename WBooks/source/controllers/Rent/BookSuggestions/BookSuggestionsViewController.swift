@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 07/09/2021.
 //
-
 import NotificationBannerSwift
 import SVProgressHUD
 import Kingfisher
@@ -64,11 +63,13 @@ final class BookSuggestionsViewController: UIViewController {
         SVProgressHUD.show()
         viewModel.getSuggestions(onError: errorBooks(_:), onSuccess: setBooks(_:))
     }
+    
     func setBooks(_ books: [Suggestion]) {
         SVProgressHUD.dismiss()
         self.books = books
         suggestionsView.collectionBooks.reloadData()
     }
+    
     func errorBooks(_ message: String) {
         SVProgressHUD.dismiss()
         NotificationBanner(title: "Error",
@@ -88,11 +89,9 @@ extension BookSuggestionsViewController : UICollectionViewDataSource, UICollecti
         
         if let url = URL(string: books[indexPath.item].link) {
             let resource = ImageResource(downloadURL: url)
-            //cell.imageBook.contentMode = .scaleAspectFill
             cell.imageBook.kf.indicatorType = .activity
             cell.imageBook.kf.setImage(with: resource)
         }
-       
         return cell
     }
     

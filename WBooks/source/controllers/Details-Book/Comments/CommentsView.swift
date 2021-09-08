@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 18/08/2021.
 //
-
 import Foundation
 import UIKit
 
@@ -21,7 +20,7 @@ class CommentsView: NibView {
             borderView.backgroundColor = .white
             borderView.layer.cornerRadius = 20
             borderView.layer.borderWidth = 1
-            borderView.layer.borderColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+            borderView.layer.borderColor = UIColor.whiteColor().cgColor
             borderView.clipsToBounds = true
         }
     }
@@ -33,8 +32,6 @@ class CommentsView: NibView {
     }
 }
 
-
 extension CommentsView: CommentsViewProtocol {
     var commentTable: UITableView { commentsTable }
-    
 }

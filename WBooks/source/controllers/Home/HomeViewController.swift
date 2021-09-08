@@ -4,7 +4,6 @@
 //
 //  Created by noelia.nieres on 09/08/2021.
 //
-
 import NotificationBannerSwift
 import SVProgressHUD
 import UIKit
@@ -69,11 +68,13 @@ private extension HomeViewController {
         SVProgressHUD.show()
         viewModel.getBooks(onError: errorBooks(_:), onSuccess: setBooks(_:))
     }
+    
     func setBooks(_ books: [Book]) {
         SVProgressHUD.dismiss()
         self.books = books
         homeView.bookTable.reloadData()
     }
+    
     func errorBooks(_ message: String) {
         SVProgressHUD.dismiss()
         NotificationBanner(title: "Error",
@@ -83,6 +84,7 @@ private extension HomeViewController {
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
     }
@@ -98,17 +100,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         bookCell.configureWith(books[indexPath.row])
         return bookCell
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         let valor = viewModel.getCellViewModel(at: indexPath)
         let vc = DetailsViewController(valor)
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
 
