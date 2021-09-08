@@ -1,26 +1,30 @@
 //
-//  HomeViewController.swift
+//  BookSuggestionsView.swift
 //  WBooks
 //
-//  Created by noelia.nieres on 09/08/2021.
+//  Created by noelia.nieres on 07/09/2021.
 //
-
 import NotificationBannerSwift
 import SVProgressHUD
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class RentedBooksViewController: UIViewController {
     
     // MARK: - Private properties
-    private let viewModel: HomeViewModelProtocol
+    private let viewModel: RentedBooksViewModelProtocol
     private let homeView: HomeViewProtocol
+    private let homeViewModel: HomeViewModelProtocol
      
     var books: [Book] = []
+    var rents: [Rent] = []
+    var filterBooks: [Book] = []
     
     // MARK: - Initializers
-    init(viewModel: HomeViewModelProtocol = HomeViewModel(),
-         view: HomeViewProtocol = HomeView()) {
+    init(viewModel: RentedBooksViewModelProtocol = RentedBooksViewModel(),
+         view: HomeViewProtocol = HomeView(),
+         homeViewModel: HomeViewModelProtocol = HomeViewModel()) {
         self.viewModel = viewModel
+        self.homeViewModel = homeViewModel
         homeView = view
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,6 +38,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         configureTable()
+        getRents()
         getBooks()
     }
     
@@ -63,11 +68,28 @@ final class HomeViewController: UIViewController {
     }
 }
 
-private extension HomeViewController {
+private extension RentedBooksViewController {
     // MARK: - Posts methods
+    
+    func getRents() {
+        SVProgressHUD.show()
+        viewModel.getBookRent(onError: errorRents(_:), onSuccess: setRents(_:))
+    }
+    func setRents(_ rents: [Rent]) {
+        SVProgressHUD.dismiss()
+        self.rents = rents
+        homeView.bookTable.reloadData()
+    }
+    func errorRents(_ message: String) {
+        SVProgressHUD.dismiss()
+        NotificationBanner(title: "Error",
+                           subtitle: message,
+                           style: .warning).show()
+    }
+    
     func getBooks() {
         SVProgressHUD.show()
-        viewModel.getBooks(onError: errorBooks(_:), onSuccess: setBooks(_:))
+        homeViewModel.getBooks(onError: errorBooks(_:), onSuccess: setBooks(_:))
     }
     func setBooks(_ books: [Book]) {
         SVProgressHUD.dismiss()
@@ -82,11 +104,11 @@ private extension HomeViewController {
     }
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension RentedBooksViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return books.count
+        return self.books.filter { item in rents.contains (where: { $0.book_id == item.id }) }.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
         
@@ -94,21 +116,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
               books.indices.contains(indexPath.row) else {
             return UITableViewCell()
         }
-        
         bookCell.configureWith(books[indexPath.row])
+        
         return bookCell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         
-        let valor = viewModel.getCellViewModel(at: indexPath)
-        let vc = DetailsViewController(valor)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
 }
 

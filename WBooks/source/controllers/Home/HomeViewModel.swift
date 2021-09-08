@@ -9,9 +9,9 @@ import Foundation
 
 protocol HomeViewModelProtocol {
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void)
-    
     func getCellViewModel(at indexPath: IndexPath)  -> Book
- 
+    func setBooks(_ valor: [Book])
+    func getBooksList() -> [Book]
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
@@ -19,10 +19,18 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     var books: [Book] = []
     
+    func setBooks(_ valor: [Book] ) {
+        self.books = valor
+    }
+    
+    func getBooksList() -> [Book] {
+        return self.books
+    }
+    
     var numberOfCells: Int {
         return books.count
     }
-
+    
     func getCellViewModel(at indexPath: IndexPath)  -> Book  {
         return books[indexPath.row]
     }
@@ -31,14 +39,11 @@ final class HomeViewModel: HomeViewModelProtocol {
         self.repository = repository
     }
     
-    
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void) {
         repository.getBooks { errorMessage in
             onError(errorMessage)
         } onSuccess: { books in
-           self.books = books
             onSuccess(books)
         }
     }
-
 }

@@ -25,8 +25,14 @@ class TabBarController: UITabBarController {
         newBook.tabBarItem.title = title
         newBook.tabBarItem.image = UIImage(named: "ic_wishlist active.png")
         newBook.tabBarItem.tag = 1
+        
+        let rents = CustomNavigationController(rootViewController: RentViewController())
+        rents.tabBarItem = UITabBarItem()
+        rents.tabBarItem.title = title
+        rents.tabBarItem.image = UIImage(named: "ic_myrentals active.png")
+        rents.tabBarItem.tag = 2
 
-        viewControllers = [home, newBook]
+        viewControllers = [home, newBook,rents]
         
         guard let items = tabBar.items else { return }
         

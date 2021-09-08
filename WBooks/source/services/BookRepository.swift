@@ -12,6 +12,7 @@ struct Endpoint {
     static let domain = "https://ios-training-backend.herokuapp.com/api/v1"
     static let books = Endpoint.domain + "/books"
     static let user = Endpoint.domain + "/users/"
+    static let suggestion = Endpoint.domain + "/suggestions"
 }
 
 struct GeneralResponse: Codable {
@@ -26,14 +27,12 @@ struct ErrorResponse: Codable {
 protocol BookRepositoryType {
     
     func addBook(book: BookRequest, onSuccess: @escaping (BookRequest) -> Void, onError: @escaping (String) -> Void)
-    
     func getBooks(onError: @escaping (String) -> Void, onSuccess: @escaping ([Book]) -> Void)
-    
     func getBookComments(_ bookId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping ([Comment]) -> Void)
-    
     func getUser(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping (User) -> Void)
-    
     func getUserComment(_ comment: Int, onError: @escaping (String) -> Void, onSuccess: @escaping (User) -> Void)
+    func getBookRent(_ userId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping ([Rent]) -> Void)
+    func getSuggestions(onError: @escaping (String) -> Void, onSuccess: @escaping ([Suggestion]) -> Void)
 }
 
 final class BookRepository: BookRepositoryType {
@@ -142,6 +141,49 @@ final class BookRepository: BookRepositoryType {
                     onSuccess(user)
                 case .failure(let error):
                     print(error)
+                    onError(error.localizedDescription)
+                }
+            }
+    }
+    
+    func getBookRent(_ userId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping ([Rent]) -> Void) {
+    
+        let ruta = Endpoint.user + "/\(userId )/rents"
+      
+         let endpoint = URL(string: ruta)!
+         var request = URLRequest(url: endpoint)
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        
+        AF.request(endpoint, method: .get, headers: nil)
+            .validate()
+            .responseDecodable(of: [Rent].self) { response in
+                switch response.result {
+                case .success(let books):
+                    onSuccess(books)
+                case .failure(let error):
+                    print(error)
+                    onError(error.localizedDescription)
+                }
+            }
+    }
+    
+    func getSuggestions(onError: @escaping (String) -> Void, onSuccess: @escaping ([Suggestion]) -> Void) {
+        
+        let endpoint = URL(string: Endpoint.suggestion)!
+         var request = URLRequest(url: endpoint)
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         request.addValue("application/json", forHTTPHeaderField: "Accept")
+
+        AF.request(endpoint, method: .get, headers: nil)
+            .validate()
+            .responseDecodable(of: [Suggestion].self) { response in
+                switch response.result {
+                case .success(let suggestions):
+                    print(suggestions, "suggestions")
+                    onSuccess(suggestions)
+                case .failure(let error):
                     onError(error.localizedDescription)
                 }
             }
