@@ -99,6 +99,9 @@ extension BookSuggestionsViewController : UICollectionViewDataSource, UICollecti
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
-   
+}
+extension BookSuggestionsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 55, height: 80)
+    }
 }

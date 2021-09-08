@@ -16,21 +16,18 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="toZ-XE-ke2">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7tP-0j-Qdm">
-                            <rect key="frame" x="15" y="10" width="384" height="80"/>
+                            <rect key="frame" x="30" y="43.5" width="354" height="60.5"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nua-Qn-JQr">
-                                    <rect key="frame" x="0.0" y="0.0" width="384" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="60.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="80" id="M7J-7R-cFw"/>
-                                    </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GdL-tI-dmv">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -40,18 +37,23 @@
                                 </collectionView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="nua-Qn-JQr" firstAttribute="top" secondItem="7tP-0j-Qdm" secondAttribute="top" id="2a0-RN-FKT"/>
-                                <constraint firstAttribute="bottom" secondItem="nua-Qn-JQr" secondAttribute="bottom" id="3gT-Hi-w4F"/>
-                                <constraint firstItem="nua-Qn-JQr" firstAttribute="leading" secondItem="7tP-0j-Qdm" secondAttribute="leading" id="BGC-cH-cZ7"/>
-                                <constraint firstAttribute="trailing" secondItem="nua-Qn-JQr" secondAttribute="trailing" id="pLj-yz-Kui"/>
+                                <constraint firstAttribute="height" constant="60.5" id="1Wl-yY-Rnt"/>
                             </constraints>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4O-GC-OPE">
+                            <rect key="frame" x="30" y="9" width="94.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="7tP-0j-Qdm" secondAttribute="bottom" constant="10" id="5ss-N7-d3j"/>
-                        <constraint firstItem="7tP-0j-Qdm" firstAttribute="leading" secondItem="toZ-XE-ke2" secondAttribute="leading" constant="15" id="Esa-uc-ysX"/>
-                        <constraint firstAttribute="trailing" secondItem="7tP-0j-Qdm" secondAttribute="trailing" constant="15" id="jE4-Bc-8cc"/>
-                        <constraint firstItem="7tP-0j-Qdm" firstAttribute="top" secondItem="toZ-XE-ke2" secondAttribute="top" constant="10" id="s8e-gx-PKF"/>
+                        <constraint firstItem="T4O-GC-OPE" firstAttribute="leading" secondItem="toZ-XE-ke2" secondAttribute="leading" constant="30" id="IiO-BX-6G4"/>
+                        <constraint firstItem="7tP-0j-Qdm" firstAttribute="top" secondItem="T4O-GC-OPE" secondAttribute="bottom" constant="14" id="jPe-jU-wxS"/>
+                        <constraint firstItem="7tP-0j-Qdm" firstAttribute="leading" secondItem="toZ-XE-ke2" secondAttribute="leading" constant="30" id="jix-yw-6YI"/>
+                        <constraint firstAttribute="trailing" secondItem="7tP-0j-Qdm" secondAttribute="trailing" constant="30" id="oA8-ro-4Yg"/>
+                        <constraint firstItem="T4O-GC-OPE" firstAttribute="top" secondItem="toZ-XE-ke2" secondAttribute="top" constant="9" id="rqV-U3-gzi"/>
+                        <constraint firstAttribute="bottom" secondItem="7tP-0j-Qdm" secondAttribute="bottom" constant="6" id="zEr-oS-6gH"/>
                     </constraints>
                 </view>
             </subviews>
@@ -64,7 +66,7 @@
                 <constraint firstAttribute="bottom" secondItem="toZ-XE-ke2" secondAttribute="bottom" id="zEE-t8-YCL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="240.57971014492756" y="-237.72321428571428"/>
+            <point key="canvasLocation" x="249" y="-224"/>
         </view>
     </objects>
     <resources>
