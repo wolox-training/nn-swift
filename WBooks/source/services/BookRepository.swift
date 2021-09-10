@@ -209,7 +209,6 @@ final class BookRepository: BookRepositoryType {
             .responseDecodable(of: [Suggestion].self) { response in
                 switch response.result {
                 case .success(let suggestions):
-                    print(suggestions, "suggestions")
                     onSuccess(suggestions)
                 case .failure(let error):
                     onError(error.localizedDescription)

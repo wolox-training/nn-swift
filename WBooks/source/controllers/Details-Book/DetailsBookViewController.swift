@@ -48,11 +48,17 @@ class DetailsBookViewController: UIViewController {
     
     @objc private func performRent() {
         SVProgressHUD.show()
-        viewModel.addBookRent(self.book.id, onError: errorRent(_:), onSuccess: setRent(_:))
+
+        if(self.book.status == "Available"){
+           viewModel.addBookRent(self.book.id, onError: errorRent(_:), onSuccess: setRent(_:))
+        }else{
+            showAlertMessage(message: "El libro no esta disponible")
+        }
     }
     
     func setRent(_ rent: Rent) {
         SVProgressHUD.dismiss()
+        //self.book.status = "Unavailable"
         print("llego aca!")
     }
     
@@ -61,6 +67,13 @@ class DetailsBookViewController: UIViewController {
         NotificationBanner(title: "Error",
                            subtitle: message,
                            style: .warning).show()
+    }
+    
+    func showAlertMessage(message: String) {
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okButton)
+        present(alertController, animated: true, completion: nil)
     }
     
     func configureWith() {

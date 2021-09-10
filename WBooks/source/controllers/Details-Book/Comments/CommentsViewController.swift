@@ -33,6 +33,13 @@ final class CommentsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    lazy var topLeftLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "No hay comentarios"
+        return label
+    }()
+    
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +81,15 @@ extension CommentsViewController {
     
     func setComments(_ comments: [Comment]) {
         SVProgressHUD.dismiss()
-        self.comments = comments
+
+        if(comments.isEmpty == true){
+            view.addSubview(topLeftLabel)
+            topLeftLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
+            topLeftLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
+        }else{
+            self.comments = comments
+        }
+        
         commentView.commentTable.reloadData()
         
         for item in self.comments {

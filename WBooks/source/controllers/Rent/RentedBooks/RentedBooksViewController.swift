@@ -17,7 +17,7 @@ final class RentedBooksViewController: UIViewController {
      
     var books: [Book] = []
     var rents: [Rent] = []
- 
+    var filter: [Book] = []
     // MARK: - Initializers
     init(viewModel: RentedBooksViewModelProtocol = RentedBooksViewModel(),
          view: HomeViewProtocol = HomeView(),
@@ -39,6 +39,7 @@ final class RentedBooksViewController: UIViewController {
         configureTable()
         getRents()
         getBooks()
+        
     }
     
     override func loadView() {
@@ -77,7 +78,6 @@ private extension RentedBooksViewController {
     func setRents(_ rents: [Rent]) {
         SVProgressHUD.dismiss()
         self.rents = rents
-        homeView.bookTable.reloadData()
     }
     
     func errorRents(_ message: String) {
@@ -96,6 +96,7 @@ private extension RentedBooksViewController {
         SVProgressHUD.dismiss()
         self.books = books
         homeView.bookTable.reloadData()
+        listaFilter()
     }
     
     func errorBooks(_ message: String) {
@@ -104,23 +105,22 @@ private extension RentedBooksViewController {
                            subtitle: message,
                            style: .warning).show()
     }
+    func listaFilter(){
+        self.books = self.books.filter { item in rents.contains (where: { $0.book_id == item.id }) }
+        homeView.bookTable.reloadData()
+    }
 }
 
 extension RentedBooksViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.books.filter { item in rents.contains (where: { $0.book_id == item.id }) }.count
+        return books.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeCell
+        cell!.configureWith(books[indexPath.row])
         
-        guard let bookCell = cell as? HomeCell,
-              books.indices.contains(indexPath.row) else {
-            return UITableViewCell()
-        }
-        bookCell.configureWith(books[indexPath.row])
-        
-        return bookCell
+        return cell!
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
