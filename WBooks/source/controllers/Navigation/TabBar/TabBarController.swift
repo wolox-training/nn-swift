@@ -16,23 +16,40 @@ class TabBarController: UITabBarController {
         
         let home =  CustomNavigationController(rootViewController: HomeViewController())
         home.tabBarItem = UITabBarItem()
-        home.tabBarItem.title = title
-        home.tabBarItem.image = UIImage(named: "ic_library active.png")
+        home.tabBarItem.title = "Library"
+        home.tabBarItem.image = UIImage(named: "ic_library.png")
+        home.tabBarItem.selectedImage = UIImage(named: "ic_library active.png")
         home.tabBarItem.tag = 0
+        
+        let wish = CustomNavigationController(rootViewController: WishViewController())
+        wish.tabBarItem = UITabBarItem()
+        wish.tabBarItem.title = "WishList"
+        wish.tabBarItem.image = UIImage(named: "ic_wishlist.png")
+        wish.tabBarItem.selectedImage = UIImage(named: "ic_wishlist active.png")
+        wish.tabBarItem.tag = 1
         
         let newBook = CustomNavigationController(rootViewController: NewBookViewController())
         newBook.tabBarItem = UITabBarItem()
-        newBook.tabBarItem.title = title
-        newBook.tabBarItem.image = UIImage(named: "ic_wishlist active.png")
-        newBook.tabBarItem.tag = 1
+        newBook.tabBarItem.title = "Add New"
+        newBook.tabBarItem.image = UIImage(named: "ic_add new.png")
+        newBook.tabBarItem.selectedImage = UIImage(named: "ic_add new active.png")
+        newBook.tabBarItem.tag = 2
         
         let rents = CustomNavigationController(rootViewController: RentViewController())
         rents.tabBarItem = UITabBarItem()
-        rents.tabBarItem.title = title
-        rents.tabBarItem.image = UIImage(named: "ic_myrentals active.png")
-        rents.tabBarItem.tag = 2
+        rents.tabBarItem.title = "Rentals"
+        rents.tabBarItem.image = UIImage(named: "ic_myrentals.png")
+        rents.tabBarItem.selectedImage = UIImage(named: "ic_myrentals active.png")
+        rents.tabBarItem.tag = 3
+        
+        let setting = CustomNavigationController(rootViewController: SettingController())
+        setting.tabBarItem = UITabBarItem()
+        setting.tabBarItem.title = "Setting"
+        setting.tabBarItem.image = UIImage(named: "ic_settings.png")
+        setting.tabBarItem.selectedImage = UIImage(named: "ic_settings active.png")
+        setting.tabBarItem.tag = 4
 
-        viewControllers = [home, newBook,rents]
+        viewControllers = [home,wish, newBook,rents,setting]
         
         guard let items = tabBar.items else { return }
         
@@ -42,10 +59,11 @@ class TabBarController: UITabBarController {
     }
 }
 
-class WishListController: UIViewController {
+class SettingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        title = "SETTING"
+        view.backgroundColor = .backgroundPolar()
     }
 }

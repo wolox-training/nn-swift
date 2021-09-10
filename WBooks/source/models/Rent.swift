@@ -7,7 +7,6 @@
 import Foundation
 
 public struct Rent: Codable {
-    let id: Int
     let user_id: Int
     let book_id: Int
     let from: String
@@ -15,9 +14,8 @@ public struct Rent: Codable {
 }
 
 enum RentKey: String, CodingKey {
-    case id = "id"
     case user_id = "user_id"
     case book_id = "book_id"
-    case from
-    case to
+    case from = "from"
+    case to = "to"
 }

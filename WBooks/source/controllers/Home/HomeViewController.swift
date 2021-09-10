@@ -31,7 +31,11 @@ final class HomeViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationItem.title = "LIBRARY"
+        let search = UIBarButtonItem.searchButton
+        let notifications = UIBarButtonItem.notificationsButton
+        navigationItem.rightBarButtonItems = [search]
+        navigationItem.leftBarButtonItems = [notifications]
         configureTable()
         getBooks()
     }

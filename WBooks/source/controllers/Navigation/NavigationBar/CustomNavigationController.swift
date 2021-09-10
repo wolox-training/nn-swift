@@ -30,28 +30,17 @@ class CustomNavigationController: UINavigationController {
         navigationBar.barStyle = .default
         navigationBar.backgroundColor = .backgroundPolar()
         
-        let img = UIImage(named: "bc_nav bar")
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationBar.titleTextAttributes = textAttributes
         
-        navigationBar.setBackgroundImage(img!.resizableImage(withCapInsets: UIEdgeInsets(top: 0,left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
+        navigationBar.setBackgroundImage(UIImage(named: "bc_nav bar.png")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0,left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
         navigationBar.shadowImage = UIImage()
         
         navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
-        let backImage = UIImage(named: "ic_back")!
+        let backImage = UIImage(named: "ic_back.png")!
         navigationBar.backIndicatorImage = backImage
         navigationBar.backIndicatorTransitionMaskImage = backImage
-        
-        // common configuration
-        if let viewController = viewControllers.first {
-            let logout = UIBarButtonItem(image: UIImage(named: "logout"), style: .plain, target: self, action: #selector(self.logout))
-            viewController.navigationItem.leftBarButtonItem = logout
-            
-            let backItem = UIBarButtonItem()
-            backItem.title = ""
-            viewController.navigationItem.backBarButtonItem = backItem
-        }
     }
     
     @objc private func logout() {

@@ -32,6 +32,7 @@ class NewBookViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "ADD NEW BOOK"
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         setupActions()
         

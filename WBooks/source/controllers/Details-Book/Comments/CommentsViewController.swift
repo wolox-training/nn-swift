@@ -14,13 +14,16 @@ final class CommentsViewController: UIViewController {
     // MARK: - Private properties
     private let viewModel: CommentsViewModelProtocol
     private let commentView: CommentsViewProtocol
+    var book: Book!
     
     var comments: [Comment] = []
     var users: [User] = []
    
     // MARK: - Initializers
-    init(viewModel: CommentsViewModelProtocol = CommentsViewModel(),
+    init( _ book: Book,
+        viewModel: CommentsViewModelProtocol = CommentsViewModel(),
          view: CommentsViewProtocol = CommentsView()) {
+        self.book = book
         self.viewModel = viewModel
         commentView = view
         super.init(nibName: nil, bundle: nil)
@@ -33,6 +36,7 @@ final class CommentsViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        getBookComments(self.book.id)
         configureTable()
     }
     

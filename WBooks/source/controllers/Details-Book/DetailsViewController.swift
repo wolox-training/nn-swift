@@ -21,15 +21,11 @@ class DetailsViewController: ScrollStackViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "BOOK DETAIL"
     }
 
     override func addChildrenViewControllers(){
-        let details = DetailsBookViewController()
-        details.configureWith(bookViewModel)
-        
-        let comment = CommentsViewController()
-        comment.getBookComments(bookViewModel.id)
-        add(details)
-        add(comment)
+        add(DetailsBookViewController(bookViewModel))
+        add(CommentsViewController(bookViewModel))
     }
 }

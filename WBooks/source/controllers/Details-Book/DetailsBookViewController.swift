@@ -4,16 +4,23 @@
 //
 //  Created by noelia.nieres on 10/08/2021.
 //
-
 import UIKit
+import SVProgressHUD
+import NotificationBannerSwift
 
-class DetailsBookViewController: WBooksViewController {
+class DetailsBookViewController: UIViewController {
     
     private let detailsView: DetailsBookViewProtocol
+    private let viewModel: RentedBooksViewModelProtocol
+    var book: Book!
     
     // MARK: - Initializer
-    init(view: DetailsBookViewProtocol = DetailsBookView()) {
+    init(_ book: Book,
+        view: DetailsBookViewProtocol = DetailsBookView(),
+        viewModel: RentedBooksViewModelProtocol = RentedBooksViewModel()) {
+        self.book = book
         detailsView = view
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,17 +31,44 @@ class DetailsBookViewController: WBooksViewController {
     override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden =  true
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureWith()
+        setupActions()
+    }
     
     override func loadView() {
         super.loadView()
         view = detailsView
     }
+    private func setupActions() {
+       // detailsView.addButtonAction(#selector(performWish), for: DetailsButtons.wish, from: self)
+        detailsView.addButtonAction(#selector(performRent), for: DetailsButtons.rent, from: self)
+    }
     
-    func configureWith(_ book: Book) {
-        detailsView.setTitleValue(book.title)
-        detailsView.setEditorialValue(book.genre)
-        detailsView.setAuthorValue(book.author)
-        detailsView.setYearValue(book.year)
-        detailsView.setImage(book.image)
+    @objc private func performRent() {
+        SVProgressHUD.show()
+        viewModel.addBookRent(self.book.id, onError: errorRent(_:), onSuccess: setRent(_:))
+    }
+    
+    func setRent(_ rent: Rent) {
+        SVProgressHUD.dismiss()
+        print("llego aca!")
+    }
+    
+    func errorRent(_ message: String) {
+        SVProgressHUD.dismiss()
+        NotificationBanner(title: "Error",
+                           subtitle: message,
+                           style: .warning).show()
+    }
+    
+    func configureWith() {
+        detailsView.setTitleValue(self.book.title)
+        detailsView.setEditorialValue(self.book.genre)
+        detailsView.setAuthorValue(self.book.author)
+        detailsView.setYearValue(self.book.year)
+        detailsView.setAvailableValue(self.book.status)
+        detailsView.setImage(self.book.image)
     }
 }

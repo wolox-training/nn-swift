@@ -7,8 +7,9 @@
 import UIKit
 
 protocol RentedBooksViewModelProtocol {
-
+    
     func getBookRent(onError: @escaping (String) -> Void, onSuccess: @escaping ([Rent]) -> Void)
+    func addBookRent(_ bookId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping (Rent) -> Void)
 }
 
 final class RentedBooksViewModel: RentedBooksViewModelProtocol {
@@ -25,6 +26,14 @@ final class RentedBooksViewModel: RentedBooksViewModelProtocol {
             onError(errorMessage)
         } onSuccess: { books in
             onSuccess(books)
+        }
+    }
+    
+    func addBookRent(_ bookId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping (Rent) -> Void){
+        repository.addBookRent(bookId) { errorMessage in
+            onError(errorMessage)
+        } onSuccess: { rent in
+            onSuccess(rent)
         }
     }
 }

@@ -1,25 +1,25 @@
 //
-//  BookSuggestionsView.swift
+//  WishViewController.swift
 //  WBooks
 //
-//  Created by noelia.nieres on 07/09/2021.
+//  Created by noelia.nieres on 10/09/2021.
 //
 import NotificationBannerSwift
 import SVProgressHUD
 import UIKit
 
-final class RentedBooksViewController: UIViewController {
+final class WishViewController: UIViewController {
     
     // MARK: - Private properties
-    private let viewModel: RentedBooksViewModelProtocol
+    private let viewModel: WishViewModelProtocol
     private let homeView: HomeViewProtocol
     private let homeViewModel: HomeViewModelProtocol
      
     var books: [Book] = []
-    var rents: [Rent] = []
- 
+    var wishes: [Wish] = []
+    
     // MARK: - Initializers
-    init(viewModel: RentedBooksViewModelProtocol = RentedBooksViewModel(),
+    init(viewModel: WishViewModelProtocol = WishViewModel(),
          view: HomeViewProtocol = HomeView(),
          homeViewModel: HomeViewModelProtocol = HomeViewModel()) {
         self.viewModel = viewModel
@@ -35,9 +35,10 @@ final class RentedBooksViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "MY WISHES"
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         configureTable()
-        getRents()
+        getWishes()
         getBooks()
     }
     
@@ -66,21 +67,21 @@ final class RentedBooksViewController: UIViewController {
     }
 }
 
-private extension RentedBooksViewController {
+private extension WishViewController {
     // MARK: - Posts methods
     
-    func getRents() {
+    func getWishes() {
         SVProgressHUD.show()
-        viewModel.getBookRent(onError: errorRents(_:), onSuccess: setRents(_:))
+        viewModel.getWishes(onError: errorWishes(_:), onSuccess: setWishes(_:))
     }
     
-    func setRents(_ rents: [Rent]) {
+    func setWishes(_ wishes: [Wish]) {
         SVProgressHUD.dismiss()
-        self.rents = rents
+        self.wishes = wishes
         homeView.bookTable.reloadData()
     }
     
-    func errorRents(_ message: String) {
+    func errorWishes(_ message: String) {
         SVProgressHUD.dismiss()
         NotificationBanner(title: "Error",
                            subtitle: message,
@@ -106,9 +107,9 @@ private extension RentedBooksViewController {
     }
 }
 
-extension RentedBooksViewController: UITableViewDataSource, UITableViewDelegate {
+extension WishViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.books.filter { item in rents.contains (where: { $0.book_id == item.id }) }.count
+        return self.books.filter { item in wishes.contains (where: { $0.book_id == item.id }) }.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -125,13 +126,5 @@ extension RentedBooksViewController: UITableViewDataSource, UITableViewDelegate 
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        var valor = homeViewModel.getCellViewModel(at: indexPath)
-        valor.status = "In your hands"
-        let vc = DetailsViewController(valor)
-        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

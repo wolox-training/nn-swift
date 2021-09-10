@@ -14,11 +14,8 @@
 		9906394826C2514800E3609D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906394726C2514800E3609D /* Book.swift */; };
 		9906394E26C304E400E3609D /* DetailsBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906394C26C304E400E3609D /* DetailsBookViewController.swift */; };
 		9906394F26C304E400E3609D /* DetailsBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9906394D26C304E400E3609D /* DetailsBookView.xib */; };
-		9906395826C3959E00E3609D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906395626C3959E00E3609D /* NavigationBar.swift */; };
-		9906395926C3959E00E3609D /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9906395726C3959E00E3609D /* NavigationBar.xib */; };
 		9906395A26C4352D00E3609D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9906395C26C4352D00E3609D /* Localizable.strings */; };
 		99304B0E26D97DF60059399E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99304B0D26D97DF60059399E /* Comment.swift */; };
-		994A4D6326C44D2600669237 /* WBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A4D6226C44D2600669237 /* WBooksViewController.swift */; };
 		9960975026CD5603003D4977 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960974E26CD5603003D4977 /* CommentsViewController.swift */; };
 		9960975126CD5603003D4977 /* CommentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9960974F26CD5603003D4977 /* CommentsView.xib */; };
 		9960975326CD5662003D4977 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960975226CD5662003D4977 /* CommentsView.swift */; };
@@ -40,6 +37,12 @@
 		99732D7626B478FB00FB9033 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D7526B478FB00FB9033 /* WBooksTests.swift */; };
 		99732D8126B478FB00FB9033 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99732D8026B478FB00FB9033 /* WBooksUITests.swift */; };
 		9994981326E93F1800133A9D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994981226E93F1800133A9D /* ColorExtension.swift */; };
+		9994981826EABD6F00133A9D /* BarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994981726EABD6F00133A9D /* BarButtonItemExtension.swift */; };
+		9994981A26EB13B500133A9D /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994981926EB13B500133A9D /* ButtonExtension.swift */; };
+		9994981C26EB185A00133A9D /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994981B26EB185A00133A9D /* Wish.swift */; };
+		9994981F26EB191100133A9D /* WishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994981E26EB191100133A9D /* WishViewController.swift */; };
+		9994982126EB193D00133A9D /* WishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994982026EB193D00133A9D /* WishViewModel.swift */; };
+		9994982326EBC47D00133A9D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994982226EBC47D00133A9D /* DateExtension.swift */; };
 		999B56C826DC61E100CC9263 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B56C726DC61E100CC9263 /* User.swift */; };
 		999D9B3B26C0DBB7001A154B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D9B3A26C0DBB7001A154B /* HomeViewController.swift */; };
 		99DB3EEF26C7012B007B4EC9 /* CommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB3EED26C7012B007B4EC9 /* CommentsCellView.swift */; };
@@ -97,12 +100,9 @@
 		9906394726C2514800E3609D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9906394C26C304E400E3609D /* DetailsBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBookViewController.swift; sourceTree = "<group>"; };
 		9906394D26C304E400E3609D /* DetailsBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsBookView.xib; sourceTree = "<group>"; };
-		9906395626C3959E00E3609D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		9906395726C3959E00E3609D /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		9906395B26C4352D00E3609D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9906395D26C4368A00E3609D /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		99304B0D26D97DF60059399E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		994A4D6226C44D2600669237 /* WBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksViewController.swift; sourceTree = "<group>"; };
 		9960974B26CD5422003D4977 /* ScrollStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStackViewController.swift; sourceTree = "<group>"; };
 		9960974E26CD5603003D4977 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		9960974F26CD5603003D4977 /* CommentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsView.xib; sourceTree = "<group>"; };
@@ -135,6 +135,12 @@
 		99732D8026B478FB00FB9033 /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		99732D8226B478FB00FB9033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9994981226E93F1800133A9D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		9994981726EABD6F00133A9D /* BarButtonItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemExtension.swift; sourceTree = "<group>"; };
+		9994981926EB13B500133A9D /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		9994981B26EB185A00133A9D /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
+		9994981E26EB191100133A9D /* WishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishViewController.swift; sourceTree = "<group>"; };
+		9994982026EB193D00133A9D /* WishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishViewModel.swift; sourceTree = "<group>"; };
+		9994982226EBC47D00133A9D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		999B56C726DC61E100CC9263 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		999D9B3A26C0DBB7001A154B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		99BC02E126D6936900688075 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,9 +277,6 @@
 		9906394926C265C000E3609D /* NavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				9906395626C3959E00E3609D /* NavigationBar.swift */,
-				9906395726C3959E00E3609D /* NavigationBar.xib */,
-				994A4D6226C44D2600669237 /* WBooksViewController.swift */,
 				99E6143A26DD8938004011D5 /* CustomNavigationController.swift */,
 			);
 			path = NavigationBar;
@@ -283,8 +286,12 @@
 			isa = PBXGroup;
 			children = (
 				9960975C26CD626E003D4977 /* NibView.swift */,
+				99DC1C7326E69784008A0916 /* FormTextField.swift */,
 				9960974B26CD5422003D4977 /* ScrollStackViewController.swift */,
 				9994981226E93F1800133A9D /* ColorExtension.swift */,
+				9994981726EABD6F00133A9D /* BarButtonItemExtension.swift */,
+				9994981926EB13B500133A9D /* ButtonExtension.swift */,
+				9994982226EBC47D00133A9D /* DateExtension.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -369,6 +376,15 @@
 			path = WBooksUITests;
 			sourceTree = "<group>";
 		};
+		9994981D26EB18F900133A9D /* Wish */ = {
+			isa = PBXGroup;
+			children = (
+				9994981E26EB191100133A9D /* WishViewController.swift */,
+				9994982026EB193D00133A9D /* WishViewModel.swift */,
+			);
+			path = Wish;
+			sourceTree = "<group>";
+		};
 		999D9B3C26C17C30001A154B /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,8 +408,8 @@
 		999D9B3E26C17C99001A154B /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9994981D26EB18F900133A9D /* Wish */,
 				99DC1C7526E7E39B008A0916 /* Rent */,
-				99E6144326DF2ABC004011D5 /* Custom */,
 				99E6143C26DDCD5A004011D5 /* NewBook */,
 				9960974D26CD54BA003D4977 /* Navigation */,
 				9960974A26CD53FB003D4977 /* Commons */,
@@ -432,6 +448,7 @@
 				99DC1C7126E5A1DF008A0916 /* BookRequest.swift */,
 				99DC1C8B26E7FC9F008A0916 /* Rent.swift */,
 				99DC1C8D26E8771A008A0916 /* Suggestion.swift */,
+				9994981B26EB185A00133A9D /* Wish.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -502,14 +519,6 @@
 				99E6144426E002B7004011D5 /* NewBookViewModel.swift */,
 			);
 			path = NewBook;
-			sourceTree = "<group>";
-		};
-		99E6144326DF2ABC004011D5 /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				99DC1C7326E69784008A0916 /* FormTextField.swift */,
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,7 +637,6 @@
 				99DC1C7A26E7E3FF008A0916 /* BookSuggestionsView.xib in Resources */,
 				9906394F26C304E400E3609D /* DetailsBookView.xib in Resources */,
 				99732D6B26B478FB00FB9033 /* LaunchScreen.storyboard in Resources */,
-				9906395926C3959E00E3609D /* NavigationBar.xib in Resources */,
 				9900045226C0D48800FF06D1 /* HomeCell.xib in Resources */,
 				99732D6826B478FB00FB9033 /* Assets.xcassets in Resources */,
 				99DC1C8A26E7EFAA008A0916 /* BookSuggestionCell.xib in Resources */,
@@ -760,6 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9994981A26EB13B500133A9D /* ButtonExtension.swift in Sources */,
 				99E6143B26DD8938004011D5 /* CustomNavigationController.swift in Sources */,
 				99DC1C8526E7E4CE008A0916 /* BookSuggestionsViewModel.swift in Sources */,
 				9900045126C0D48800FF06D1 /* HomeCell.swift in Sources */,
@@ -768,25 +777,28 @@
 				9960976D26D0224A003D4977 /* HomeViewModel.swift in Sources */,
 				9960975026CD5603003D4977 /* CommentsViewController.swift in Sources */,
 				99DB3EEF26C7012B007B4EC9 /* CommentsCellView.swift in Sources */,
+				9994981826EABD6F00133A9D /* BarButtonItemExtension.swift in Sources */,
 				99E6143F26DDCD97004011D5 /* NewBookView.swift in Sources */,
+				9994981F26EB191100133A9D /* WishViewController.swift in Sources */,
 				9960975D26CD626E003D4977 /* NibView.swift in Sources */,
 				99DB3EF426CB78C2007B4EC9 /* TabBarController.swift in Sources */,
 				99DC1C7426E69784008A0916 /* FormTextField.swift in Sources */,
 				99E6144226DDD25F004011D5 /* NewBookViewController.swift in Sources */,
 				99DC1C7C26E7E41E008A0916 /* BookSuggestionsViewController.swift in Sources */,
+				9994982326EBC47D00133A9D /* DateExtension.swift in Sources */,
 				99732D5F26B478F600FB9033 /* AppDelegate.swift in Sources */,
 				99304B0E26D97DF60059399E /* Comment.swift in Sources */,
 				99DC1C8026E7E46F008A0916 /* RentedBooksViewController.swift in Sources */,
-				9906395826C3959E00E3609D /* NavigationBar.swift in Sources */,
 				9906394E26C304E400E3609D /* DetailsBookViewController.swift in Sources */,
 				99DC1C9026E884C9008A0916 /* RentViewController.swift in Sources */,
 				99DC1C8E26E8771B008A0916 /* Suggestion.swift in Sources */,
+				9994981C26EB185A00133A9D /* Wish.swift in Sources */,
 				9960975526CD5BF3003D4977 /* DetailsBookView.swift in Sources */,
 				99DC1C8C26E7FC9F008A0916 /* Rent.swift in Sources */,
-				994A4D6326C44D2600669237 /* WBooksViewController.swift in Sources */,
 				9960975826CD5DF3003D4977 /* DetailsViewController.swift in Sources */,
 				9960977426D02BEA003D4977 /* HomeView.swift in Sources */,
 				9906394826C2514800E3609D /* Book.swift in Sources */,
+				9994982126EB193D00133A9D /* WishViewModel.swift in Sources */,
 				99DC1C7226E5A1DF008A0916 /* BookRequest.swift in Sources */,
 				9960975926CD5E4C003D4977 /* ScrollStackViewController.swift in Sources */,
 				99DC1C7926E7E3FF008A0916 /* BookSuggestionsView.swift in Sources */,

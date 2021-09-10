@@ -32,9 +32,13 @@ protocol BookRepositoryType {
     func getUserComment(_ comment: Int, onError: @escaping (String) -> Void, onSuccess: @escaping (User) -> Void)
     func getBookRent(_ userId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping ([Rent]) -> Void)
     func getSuggestions(onError: @escaping (String) -> Void, onSuccess: @escaping ([Suggestion]) -> Void)
+    func getWishes(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping ([Wish]) -> Void)
+    func addBookRent(_ bookId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping (Rent) -> Void)
 }
 
 final class BookRepository: BookRepositoryType {
+    
+    var userId = 2
     
      func addBook(book: BookRequest, onSuccess: @escaping (BookRequest) -> Void, onError: @escaping (String) -> Void) {
 
@@ -123,8 +127,7 @@ final class BookRepository: BookRepositoryType {
     func getUser(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping (User) -> Void) {
     
         let ruta = Endpoint.user + "\(id )"
-        print(ruta, " ruta getuser")
-        
+
          let endpoint = URL(string: ruta)!
          var request = URLRequest(url: endpoint)
          request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -142,6 +145,33 @@ final class BookRepository: BookRepositoryType {
                     onError(error.localizedDescription)
                 }
             }
+    }
+    func addBookRent(_ bookId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping (Rent) -> Void) {
+    
+        let ruta = Endpoint.user + "/\(userId )/rents"
+      
+         let endpoint = URL(string: ruta)!
+         var request = URLRequest(url: endpoint)
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        var rentRequest: Rent!
+        
+        rentRequest = Rent(
+            user_id: userId,
+            book_id: bookId,
+            from: Date.customDate(with: Date()),
+            to: Date.customDate(with: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
+        )
+        
+        AF.request(endpoint, method: .post, parameters: rentRequest, encoder: JSONParameterEncoder.default)
+            .responseDecodable(of: Rent.self) { response in
+            switch response.result {
+                case .success(let rent):
+                    onSuccess(rent)
+                case .failure(let error):
+                 onError(error.localizedDescription)
+                }
+        }
     }
     
     func getBookRent(_ userId: Int, onError: @escaping (String) -> Void, onSuccess: @escaping ([Rent]) -> Void) {
@@ -182,6 +212,29 @@ final class BookRepository: BookRepositoryType {
                     print(suggestions, "suggestions")
                     onSuccess(suggestions)
                 case .failure(let error):
+                    onError(error.localizedDescription)
+                }
+            }
+    }
+    
+    func getWishes(_ id: String, onError: @escaping (String) -> Void, onSuccess: @escaping ([Wish]) -> Void) {
+    
+        let ruta = Endpoint.user + "/\(id )/wishes"
+        print(ruta, " ruta getWishes")
+        
+         let endpoint = URL(string: ruta)!
+         var request = URLRequest(url: endpoint)
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        AF.request(endpoint, method: .get, headers: nil)
+            .validate()
+            .responseDecodable(of: [Wish].self) { response in
+                switch response.result {
+                case .success(let wishes):
+                    onSuccess(wishes)
+                case .failure(let error):
+                    print(error)
                     onError(error.localizedDescription)
                 }
             }

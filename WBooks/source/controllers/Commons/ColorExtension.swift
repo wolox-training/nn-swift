@@ -17,7 +17,16 @@ extension UIColor {
     static func backgroundNav() -> UIColor {
         return UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1)
     }
+    class func blueFirstGradient() -> UIColor {
+        return UIColor(red: 0.0, green: 0.68, blue: 0.93, alpha: 1)
+    }
+    class func blueSecondGradient() -> UIColor {
+        return UIColor(red: 0.22, green: 0.8, blue: 0.8, alpha: 1)
+    }
     static func whiteColor() -> UIColor {
         return UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
+    }
+    static func grey() -> UIColor {
+        return UIColor(red: 0.79, green: 0.79, blue: 0.79, alpha: 1)
     }
 }

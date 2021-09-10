@@ -15,6 +15,11 @@ class RentViewController: ScrollStackViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = "MY RENTALS"
+    }
 
     override func addChildrenViewControllers(){
         add(RentedBooksViewController())
